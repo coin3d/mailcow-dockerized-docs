@@ -773,8 +773,8 @@ MariaDB [(none)]&gt; FLUSH PRIVILEGES;
 <p>Limit the output by calling logs with <code>--tail=300</code> like <code>docker-compose logs --tail=300 mysql-mailcow</code>.</p>
 <h2 id="redirect-port-80-to-443">Redirect port 80 to 443<a class="headerlink" href="#redirect-port-80-to-443" title="Permanent link">&para;</a></h2>
 <p>Since February the 28th 2017 mailcow does come with port 80 and 443 enabled.</p>
-<p>Open <code>mailcow.conf</code> and set <code>HTTP_BIND=0.0.0.0</code>.</p>
-<p>Open <code>data/conf/nginx/site.conf</code> and add a new "catch-all" site at the top of that file:</p>
+<p>Open <code>mailcow.conf</code> and set <code>HTTP_BIND=0.0.0.0</code> - if not already set.</p>
+<p>Open <code>data/conf/nginx/site.conf</code> and add a new site at the top of that file:</p>
 <div class="codehilite"><pre><span></span><span class="nt">server</span> <span class="p">{</span>
     <span class="err">listen</span> <span class="err">80</span> <span class="err">default_server</span><span class="p">;</span>
     <span class="err">include</span> <span class="err">/etc/nginx/conf.d/server_name.active</span><span class="p">;</span>
@@ -783,8 +783,16 @@ MariaDB [(none)]&gt; FLUSH PRIVILEGES;
 </pre></div>
 
 
-<p>Restart the stack, changed containers will be updated:</p>
-<p><code>docker-compose up -d</code></p>
+<p>In case you changed the HTTP_BIND parameter, recreate the container:</p>
+<div class="codehilite"><pre><span></span>docker-compose up -d
+</pre></div>
+
+
+<p>Otherwise restart Nginx:</p>
+<div class="codehilite"><pre><span></span>docker-compose restart nginx-mailcow
+</pre></div>
+
+
 <h2 id="redis">Redis<a class="headerlink" href="#redis" title="Permanent link">&para;</a></h2>
 <h3 id="client">Client<a class="headerlink" href="#client" title="Permanent link">&para;</a></h3>
 <div class="codehilite"><pre><span></span>docker-compose exec redis-mailcow redis-cli
