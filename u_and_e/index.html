@@ -721,9 +721,10 @@ docker-compose exec mysql-mailcow mysqldump --default-character-set=utf8mb4 -u<s
 
 
 <h3 id="restore_1">Restore<a class="headerlink" href="#restore_1" title="Permanent link">&para;</a></h3>
+<p>You should redirect the sql dump without Docker-Compose to prevent parsing errors.</p>
 <div class="codehilite"><pre><span></span>cd /path/to/mailcow-dockerized
 source mailcow.conf
-docker-compose exec mysql-mailcow mysql -u<span class="cp">${</span><span class="n">DBUSER</span><span class="cp">}</span> -p<span class="cp">${</span><span class="n">DBPASS</span><span class="cp">}</span> <span class="cp">${</span><span class="n">DBNAME</span><span class="cp">}</span> <span class="nt">&lt; backup</span><span class="err">_file.sql</span>
+docker exec -i $(docker-compose ps -q mysql-mailcow) mysql -u<span class="cp">${</span><span class="n">DBUSER</span><span class="cp">}</span> -p<span class="cp">${</span><span class="n">DBPASS</span><span class="cp">}</span> <span class="cp">${</span><span class="n">DBNAME</span><span class="cp">}</span> <span class="nt">&lt; backup</span><span class="err">_file.sql</span>
 </pre></div>
 
 
