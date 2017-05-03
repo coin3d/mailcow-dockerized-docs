@@ -620,6 +620,9 @@ mailcow: dockerized trusts the default gateway IP 172.22.1.1 as proxy. This is v
     <span class="nb">ProxyPreserveHost</span> <span class="k">On</span>
     <span class="nb">ProxyAddHeaders</span> <span class="k">On</span>
 
+    <span class="c"># This header does not need to be set when using http</span>
+    <span class="nb">RequestHeader</span> set X-Forwarded-Proto <span class="s2">&quot;https&quot;</span>
+
     <span class="err">your-ssl-configuration-</span><span class="nb">here</span>
     [...]
 
