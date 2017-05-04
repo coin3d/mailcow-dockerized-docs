@@ -277,6 +277,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#haproxy" title="HAProxy" class="md-nav__link">
+    HAProxy
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -431,6 +438,13 @@
           <li class="md-nav__item">
   <a href="#nginx" title="Nginx" class="md-nav__link">
     Nginx
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#haproxy" title="HAProxy" class="md-nav__link">
+    HAProxy
   </a>
   
 </li>
@@ -655,6 +669,19 @@ mailcow: dockerized trusts the default gateway IP 172.22.1.1 as proxy. This is v
     <span class="p">}</span>
     <span class="cp">[</span><span class="nx">...</span><span class="cp">]</span>
 <span class="err">}</span>
+</pre></div>
+
+
+<h3 id="haproxy">HAProxy<a class="headerlink" href="#haproxy" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span>frontend https-in
+  bind :::443 v4v6 ssl crt mailcow.pem
+  default_backend mailcow
+
+backend mailcow
+  option forwardfor
+  http-request set-header X-Forwarded-Proto https if { ssl_fc }
+  http-request set-header X-Forwarded-Proto http if !{ ssl_fc }
+  server mailcow 127.0.0.1:8080 check
 </pre></div>
 
 
