@@ -38,6 +38,8 @@
       <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     
     
+      <link rel="stylesheet" href="../extra.css">
+    
     
   </head>
   
@@ -254,11 +256,11 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
     
     <label class="md-nav__link" for="nav-3">
-      First Steps
+      First Steps (optional)
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-3">
-        First Steps
+        First Steps (optional)
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -305,8 +307,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../relayhost/" title="Setup a relayhost (optional)" class="md-nav__link">
-      Setup a relayhost (optional)
+    <a href="../relayhost/" title="Setup a relayhost" class="md-nav__link">
+      Setup a relayhost
     </a>
   </li>
 
@@ -749,7 +751,7 @@
                 <h3 id="learn-spam-and-ham">Learn spam and ham<a class="headerlink" href="#learn-spam-and-ham" title="Permanent link">&para;</a></h3>
 <p>Rspamd learns mail as spam or ham when you move a message in or out of the junk folder to any mailbox besides trash.
 This is archived by using the Dovecot plugin "antispam" and a simple parser script.</p>
-<p>Rspamd also auto-learns mail when a high or low score is detected (see https://rspamd.com/doc/configuration/statistic.html#autolearning)</p>
+<p>Rspamd also auto-learns mail when a high or low score is detected (see <a href="https://rspamd.com/doc/configuration/statistic.html#autolearning">https://rspamd.com/doc/configuration/statistic.html#autolearning</a>)</p>
 <p>The bayes statistics are written to Redis as keys <code>BAYES_HAM</code> and <code>BAYES_SPAM</code>.</p>
 <p>You can also use Rspamd's web ui to learn ham and/or spam.</p>
 <h3 id="learn-ham-or-spam-from-existing-directory">Learn ham or spam from existing directory<a class="headerlink" href="#learn-ham-or-spam-from-existing-directory" title="Permanent link">&para;</a></h3>
