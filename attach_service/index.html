@@ -15,7 +15,7 @@
     
     
       
-        <title>Setup a relayhost - mailcow: dockerized documentation</title>
+        <title>Attach a Container - mailcow: dockerized documentation</title>
       
     
     
@@ -79,11 +79,11 @@
             
               
                 <span class="md-header-nav__parent">
-                  First Steps (optional)
+                  Debugging & Troubleshooting
                 </span>
               
             
-            Setup a relayhost
+            Attach a Container
           
         </span>
       </div>
@@ -310,12 +310,10 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
     
     <label class="md-nav__link" for="nav-5">
       First Steps (optional)
@@ -367,43 +365,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="toc">
-        Setup a relayhost
-      </label>
-    
-    <a href="./" title="Setup a relayhost" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../relayhost/" title="Setup a relayhost" class="md-nav__link">
       Setup a relayhost
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-  
-    <label class="md-nav__title" for="toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#helper-script" title="Helper script" class="md-nav__link">
-    Helper script
-  </a>
-  
-</li>
-      
-      
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -452,10 +418,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6" checked>
     
     <label class="md-nav__link" for="nav-6">
       Debugging & Troubleshooting
@@ -495,11 +463,83 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../attach_service/" title="Attach a Container" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Attach a Container
+      </label>
+    
+    <a href="./" title="Attach a Container" class="md-nav__link md-nav__link--active">
       Attach a Container
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#attaching-a-container-to-your-shell" title="Attaching a Container to your Shell" class="md-nav__link">
+    Attaching a Container to your Shell
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#connecting-to-services" title="Connecting to Services" class="md-nav__link">
+    Connecting to Services
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mysql" title="MySQL" class="md-nav__link">
+    MySQL
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#redis" title="Redis" class="md-nav__link">
+    Redis
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#service-descriptions" title="Service Descriptions" class="md-nav__link">
+    Service Descriptions
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -935,8 +975,48 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#helper-script" title="Helper script" class="md-nav__link">
-    Helper script
+  <a href="#attaching-a-container-to-your-shell" title="Attaching a Container to your Shell" class="md-nav__link">
+    Attaching a Container to your Shell
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#connecting-to-services" title="Connecting to Services" class="md-nav__link">
+    Connecting to Services
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mysql" title="MySQL" class="md-nav__link">
+    MySQL
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#redis" title="Redis" class="md-nav__link">
+    Redis
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#service-descriptions" title="Service Descriptions" class="md-nav__link">
+    Service Descriptions
   </a>
   
 </li>
@@ -955,42 +1035,82 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/mailcow/mailcow-dockerized/edit/master/docs/relayhost.md" title="Edit this page" class="md-icon md-content__icon">edit</a>
+                  <a href="https://github.com/mailcow/mailcow-dockerized/edit/master/docs/attach_service.md" title="Edit this page" class="md-icon md-content__icon">edit</a>
                 
                 
-                  <h1>Setup a relayhost</h1>
+                  <h1>Attach a Container</h1>
                 
-                <p>Insert these lines into <code>data/conf/postfix/main.cf</code>. "relayhost" does already exist (empty), just change its value.</p>
-<div class="codehilite"><pre><span></span>relayhost = [your-relayhost]:587
-smtp_sasl_password_maps = hash:/opt/postfix/conf/smarthost_passwd
-smtp_sasl_auth_enable = yes
+                <h2 id="attaching-a-container-to-your-shell">Attaching a Container to your Shell<a class="headerlink" href="#attaching-a-container-to-your-shell" title="Permanent link">&para;</a></h2>
+<p>To attach a container to your shell you can simply run</p>
+<div class="codehilite"><pre><span></span>docker-compose exec $Service_Name /bin/bash
 </pre></div>
 
 
-<p>Create the credentials file:</p>
-<div class="codehilite"><pre><span></span>echo &quot;your-relayhost username:password&quot; &gt; data/conf/postfix/smarthost_passwd
+<h3 id="connecting-to-services">Connecting to Services<a class="headerlink" href="#connecting-to-services" title="Permanent link">&para;</a></h3>
+<p>If you whant to connect to a service / application directly it is always a good idea to <code>source mailcow.conf</code> to get all relevant variables in your environment.</p>
+<h4 id="mysql">MySQL<a class="headerlink" href="#mysql" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span>source mailcow.conf
+docker-compose exec mysql-mailcow mysql -u<span class="cp">${</span><span class="n">DBUSER</span><span class="cp">}</span> -p<span class="cp">${</span><span class="n">DBPASS</span><span class="cp">}</span> <span class="cp">${</span><span class="n">DBNAME</span><span class="cp">}</span>
 </pre></div>
 
 
-<p>Run:</p>
-<div class="codehilite"><pre><span></span>docker-compose exec postfix-mailcow postmap /opt/postfix/conf/smarthost_passwd
-docker-compose exec postfix-mailcow chown root:postfix /opt/postfix/conf/smarthost_passwd /opt/postfix/conf/smarthost_passwd.db
-docker-compose exec postfix-mailcow chmod 660 /opt/postfix/conf/smarthost_passwd /opt/postfix/conf/smarthost_passwd.db
-docker-compose exec postfix-mailcow postfix reload
+<h4 id="redis">Redis<a class="headerlink" href="#redis" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span>docker-compose exec redis-mailcow redis-cli
 </pre></div>
 
 
-<h3 id="helper-script">Helper script<a class="headerlink" href="#helper-script" title="Permanent link">&para;</a></h3>
-<p>There is a helper script <code>mailcow-setup-relayhost.sh</code> you can run to setup a relayhost.</p>
-<div class="codehilite"><pre><span></span>Usage:
-
-Setup a relayhost:
-./mailcow-setup-relayhost.sh relayhost port <span class="o">(</span>username<span class="o">)</span> <span class="o">(</span>password<span class="o">)</span>
-Username and password are optional parameters.
-
-Reset to defaults:
-./mailcow-setup-relayhost.sh reset
-</pre></div>
+<h2 id="service-descriptions">Service Descriptions<a class="headerlink" href="#service-descriptions" title="Permanent link">&para;</a></h2>
+<p>Here is a brief overview of what container / service does what:</p>
+<table>
+<thead>
+<tr>
+<th>Service Name</th>
+<th>Service Descriptions</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>bind9-mailcow</td>
+<td>Local (DNSSEC) DNS Resolver</td>
+</tr>
+<tr>
+<td>mysql-mailcow</td>
+<td>Stores SOGo's and most of mailcow's settings</td>
+</tr>
+<tr>
+<td>postfix-mailcow</td>
+<td>Receives and sends mails</td>
+</tr>
+<tr>
+<td>dovecot-mailcow</td>
+<td>User logins and sieve filter</td>
+</tr>
+<tr>
+<td>redis-mailcow</td>
+<td>Storage backend for DKIM keys, Rmilter and Rspamd</td>
+</tr>
+<tr>
+<td>rspamd-mailcow</td>
+<td>Mail filtering system. Used for av handling, dkim signing, spam handling</td>
+</tr>
+<tr>
+<td>rmilter-mailcow</td>
+<td>Integrates Rspamd into postfix</td>
+</tr>
+<tr>
+<td>clamd-mailcow</td>
+<td>Scans attachments for viruses</td>
+</tr>
+<tr>
+<td>sogo-mailcow</td>
+<td>Webmail client that handles Microsoft ActiveSync and Cal- / CardDav</td>
+</tr>
+<tr>
+<td>nginx-mailcow</td>
+<td>Nginx remote proxy that handles all mailcow related HTTP / HTTPS requests</td>
+</tr>
+</tbody>
+</table>
                 
                   
                 
@@ -1009,7 +1129,7 @@ Reset to defaults:
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../rp/" title="Reverse Proxy" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../debug_logs/" title="Logs" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -1018,19 +1138,19 @@ Reset to defaults:
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Reverse Proxy
+                Logs
               </span>
             </div>
           </a>
         
         
-          <a href="../syslog/" title="Log to Syslog" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../reset_pw/" title="Reset Passwords" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Log to Syslog
+                Reset Passwords
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

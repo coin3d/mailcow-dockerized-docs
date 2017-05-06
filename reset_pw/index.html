@@ -15,7 +15,7 @@
     
     
       
-        <title>Migrating from mailcow 0.14 - mailcow: dockerized documentation</title>
+        <title>Reset Passwords - mailcow: dockerized documentation</title>
       
     
     
@@ -78,8 +78,12 @@
           
             
               
+                <span class="md-header-nav__parent">
+                  Debugging & Troubleshooting
+                </span>
+              
             
-            Migrating from mailcow 0.14
+            Reset Passwords
           
         </span>
       </div>
@@ -246,57 +250,11 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="toc">
-        Migrating from mailcow 0.14
-      </label>
-    
-    <a href="./" title="Migrating from mailcow 0.14" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../mc14_migrate/" title="Migrating from mailcow 0.14" class="md-nav__link">
       Migrating from mailcow 0.14
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-  
-    <label class="md-nav__title" for="toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#create-mailcow-db-backups" title="Create mailcow db backups" class="md-nav__link">
-    Create mailcow db backups
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#prepare-mailcow-dockerized" title="Prepare mailcow: dockerized" class="md-nav__link">
-    Prepare mailcow: dockerized
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#import-your-backups" title="Import your backups:" class="md-nav__link">
-    Import your backups:
-  </a>
-  
-</li>
-      
-      
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
     
@@ -460,17 +418,19 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6" checked>
     
     <label class="md-nav__link" for="nav-6">
-      Usage & Examples
+      Debugging & Troubleshooting
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-6">
-        Usage & Examples
+        Debugging & Troubleshooting
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -481,8 +441,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../debug/" title="Debugging & Troubleshooting" class="md-nav__link">
-      Debugging & Troubleshooting
+    <a href="../debug/" title="Introduction" class="md-nav__link">
+      Introduction
     </a>
   </li>
 
@@ -493,9 +453,231 @@
 
 
   <li class="md-nav__item">
-    <a href="../mailcow_ui/" title="mailcow UI Configuration" class="md-nav__link">
-      mailcow UI Configuration
+    <a href="../debug_logs/" title="Logs" class="md-nav__link">
+      Logs
     </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../attach_service/" title="Attach a Container" class="md-nav__link">
+      Attach a Container
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Reset Passwords
+      </label>
+    
+    <a href="./" title="Reset Passwords" class="md-nav__link md-nav__link--active">
+      Reset Passwords
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#mailcow-admin-account" title="Mailcow Admin Account" class="md-nav__link">
+    Mailcow Admin Account
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#remove-two-factor-authentication" title="Remove Two-Factor Authentication" class="md-nav__link">
+    Remove Two-Factor Authentication
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reset-mysql-passwords" title="Reset MySQL Passwords" class="md-nav__link">
+    Reset MySQL Passwords
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#146-find-database-name" title="1. Find database name" class="md-nav__link">
+    1. Find database name
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#246-reset-one-or-more-users" title="2. Reset one or more users" class="md-nav__link">
+    2. Reset one or more users
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../rm_volumes/" title="Remove Persistent Data" class="md-nav__link">
+      Remove Persistent Data
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      Usage & Examples
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        Usage & Examples
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-1" type="checkbox" id="nav-7-1">
+    
+    <label class="md-nav__link" for="nav-7-1">
+      mailcow UI
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-7-1">
+        mailcow UI
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../mailcow_ui/" title="Configuration" class="md-nav__link">
+      Configuration
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../bl_wl/" title="Blacklist / Whitelist" class="md-nav__link">
+      Blacklist / Whitelist
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../spamfilter/" title="Spamfilter" class="md-nav__link">
+      Spamfilter
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../spamalias/" title="Temporary email aliase" class="md-nav__link">
+      Temporary email aliase
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tagging/" title="Tagging" class="md-nav__link">
+      Tagging
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tfa/" title="Two-Factor Authentication" class="md-nav__link">
+      Two-Factor Authentication
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
   </li>
 
         
@@ -517,18 +699,6 @@
 
 
   <li class="md-nav__item">
-    <a href="../mysql/" title="MySQL" class="md-nav__link">
-      MySQL
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
     <a href="../rspamd/" title="Rspamd" class="md-nav__link">
       Rspamd
     </a>
@@ -540,9 +710,129 @@
           
 
 
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-4" type="checkbox" id="nav-7-4">
+    
+    <label class="md-nav__link" for="nav-7-4">
+      Postfix
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-7-4">
+        Postfix
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../anonym_headers/" title="Anonymize Headers" class="md-nav__link">
+      Anonymize Headers
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../disable_sender_verification/" title="Disable Sender Addresses Verification" class="md-nav__link">
+      Disable Sender Addresses Verification
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
   <li class="md-nav__item">
     <a href="../why_bind9/" title="Why bind9?" class="md-nav__link">
       Why bind9?
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-6" type="checkbox" id="nav-7-6">
+    
+    <label class="md-nav__link" for="nav-7-6">
+      Backup & Restore
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-7-6">
+        Backup & Restore
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../backup_maildir/" title="Backup Maildir" class="md-nav__link">
+      Backup Maildir
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../mysql/" title="MySQL" class="md-nav__link">
+      MySQL
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../autodiscover_config/" title="Autodiscover / Autoconfig" class="md-nav__link">
+      Autodiscover / Autoconfig
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../80_to_443/" title="Redirect HTTP to HTTPS" class="md-nav__link">
+      Redirect HTTP to HTTPS
     </a>
   </li>
 
@@ -589,92 +879,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../backup_maildir/" title="Backup Maildir" class="md-nav__link">
-      Backup Maildir
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../tfa/" title="Two-Factor Authentication" class="md-nav__link">
-      Two-Factor Authentication
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../80_to_443/" title="Redirect HTTP to HTTPS" class="md-nav__link">
-      Redirect HTTP to HTTPS
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../anonym_headers/" title="Anonymize Headers" class="md-nav__link">
-      Anonymize Headers
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../tagging/" title="Tagging" class="md-nav__link">
-      Tagging
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../bl_wl/" title="Blacklist / Whitelist" class="md-nav__link">
-      Blacklist / Whitelist
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../autodiscover_config/" title="Autodiscover / Autoconfig" class="md-nav__link">
-      Autodiscover / Autoconfig
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../disable_sender_verification/" title="Disable Sender Addresses Verification" class="md-nav__link">
-      Disable Sender Addresses Verification
+    <a href="../deinstall/" title="Deinstall" class="md-nav__link">
+      Deinstall
     </a>
   </li>
 
@@ -691,13 +897,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
     
-    <label class="md-nav__link" for="nav-7">
+    <label class="md-nav__link" for="nav-8">
       Third party apps
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-7">
+      <label class="md-nav__title" for="nav-8">
         Third party apps
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -763,23 +969,43 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#create-mailcow-db-backups" title="Create mailcow db backups" class="md-nav__link">
-    Create mailcow db backups
+  <a href="#mailcow-admin-account" title="Mailcow Admin Account" class="md-nav__link">
+    Mailcow Admin Account
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#prepare-mailcow-dockerized" title="Prepare mailcow: dockerized" class="md-nav__link">
-    Prepare mailcow: dockerized
+  <a href="#remove-two-factor-authentication" title="Remove Two-Factor Authentication" class="md-nav__link">
+    Remove Two-Factor Authentication
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#import-your-backups" title="Import your backups:" class="md-nav__link">
-    Import your backups:
+  <a href="#reset-mysql-passwords" title="Reset MySQL Passwords" class="md-nav__link">
+    Reset MySQL Passwords
   </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#146-find-database-name" title="1. Find database name" class="md-nav__link">
+    1. Find database name
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#246-reset-one-or-more-users" title="2. Reset one or more users" class="md-nav__link">
+    2. Reset one or more users
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -797,90 +1023,60 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/mailcow/mailcow-dockerized/edit/master/docs/mc14_import.md" title="Edit this page" class="md-icon md-content__icon">edit</a>
+                  <a href="https://github.com/mailcow/mailcow-dockerized/edit/master/docs/reset_pw.md" title="Edit this page" class="md-icon md-content__icon">edit</a>
                 
                 
-                  <h1>Migrating from mailcow 0.14</h1>
+                  <h1>Reset Passwords</h1>
                 
-                <p><strong>WARNING</strong> Please be adviced that this guide is a first draft. Mailcow: dockerized changed quite a lot on its DB configuration. It now uses the InnoDB file format <code>Barracuda</code> and the <code>utf8mb4</code> character set. There is also some change to the DB / TABLE structure.</p>
-<p>Also note that this guide doesn't touch on the users settings like <em>Spamlevels</em>, <em>TLS Settings</em>, etc. nor the export / import of your roundcube or SOGo settings.</p>
-<p>Lastly please check the section on how to <a href="../backup_maildir/#restore">import / restore</a> your maildir backup to get an idea how to migrate your mails.</p>
-<h2 id="create-mailcow-db-backups">Create mailcow db backups<a class="headerlink" href="#create-mailcow-db-backups" title="Permanent link">&para;</a></h2>
-<p>First you need to modify the table <code>mailcow</code>. Mailcow-dockerized adds three and moves two existing columns in the table <code>mailbox</code>. The columns <code>tls_enforce_in</code> and <code>tls_enforce_out</code> get moved two rows up (behind <code>domain</code>). The columns <code>key</code>, <code>multiple_bookings</code> and <code>wants_tagged_subject</code> need to be added after <code>tls_enforce_out</code>.</p>
-<p>It should look like this:</p>
-<div class="codehilite"><pre><span></span>MariaDB [mailcow]&gt; desc mailbox;
-+----------------------+--------------+------+-----+-------------------+-----------------------------+
-| Field                | Type         | Null | Key | Default           | Extra                       |
-+----------------------+--------------+------+-----+-------------------+-----------------------------+
-| username             | varchar(255) | NO   | PRI | NULL              |                             |
-| password             | varchar(255) | NO   |     | NULL              |                             |
-| name                 | varchar(255) | YES  |     | NULL              |                             |
-| maildir              | varchar(255) | NO   |     | NULL              |                             |
-| quota                | bigint(20)   | NO   |     | 0                 |                             |
-| local_part           | varchar(255) | NO   |     | NULL              |                             |
-| domain               | varchar(255) | NO   | MUL | NULL              |                             |
-| tls_enforce_in       | tinyint(1)   | NO   |     | 0                 |                             |
-| tls_enforce_out      | tinyint(1)   | NO   |     | 0                 |                             |
-| kind                 | varchar(100) | NO   |     |                   |                             |
-| multiple_bookings    | tinyint(1)   | NO   |     | 0                 |                             |
-| wants_tagged_subject | tinyint(1)   | NO   |     | 0                 |                             |
-| created              | datetime     | NO   |     | CURRENT_TIMESTAMP |                             |
-| modified             | datetime     | YES  |     | NULL              | on update CURRENT_TIMESTAMP |
-| active               | tinyint(1)   | NO   |     | 1                 |                             |
-+----------------------+--------------+------+-----+-------------------+-----------------------------+
+                <h2 id="mailcow-admin-account">Mailcow Admin Account<a class="headerlink" href="#mailcow-admin-account" title="Permanent link">&para;</a></h2>
+<p>Reset mailcow admin to <code>admin:moohoo</code>:</p>
+<div class="codehilite"><pre><span></span>cd mailcow_path
+bash mailcow-reset-admin.sh
 </pre></div>
 
 
-<p>You can do this with a UI like <a href="https://www.adminer.org/#download">Adminer</a> or use the MySQL CLI like :</p>
-<div class="codehilite"><pre><span></span>MariaDB [mailcow]&gt; ALTER TABLE mailbox MODIFY COLUMN tls_enforce_in TINYINT(1) NOT NULL DEFAULT &#39;0&#39; AFTER domain,
-MODIFY COLUMN tls_enforce_out TINYINT(1) NOT NULL DEFAULT &#39;0&#39; AFTER tls_enforce_in;
-MariaDB [mailcow]&gt; ALTER TABLE mailbox ADD COLUMN `kind` VARCHAR(255) NOT NULL AFTER `tls_enforce_out`,
-ADD COLUMN `multiple_bookings` TINYINT(1) NOT NULL DEFAULT &#39;0&#39; AFTER `kind`,
-ADD COLUMN `wants_tagged_subject` TINYINT(1) NOT NULL DEFAULT &#39;0&#39; AFTER `multiple_bookings`;
-MariaDB [mailcow]&gt; DESC mailbox;
+<h2 id="remove-two-factor-authentication">Remove Two-Factor Authentication<a class="headerlink" href="#remove-two-factor-authentication" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span>
 </pre></div>
 
 
-<p>When this is done we can backup the tables:</p>
-<div class="codehilite"><pre><span></span><span class="c1"># Load your mysql variables into environment</span>
-<span class="nv">DBHOST</span><span class="o">=</span><span class="k">$(</span>grep database_host /var/www/mail/inc/vars.inc.php <span class="p">|</span> cut -d<span class="s1">&#39;&quot;&#39;</span> -f2<span class="k">)</span>
-<span class="nv">DBNAME</span><span class="o">=</span><span class="k">$(</span>grep database_name /var/www/mail/inc/vars.inc.php <span class="p">|</span> cut -d<span class="s1">&#39;&quot;&#39;</span> -f2<span class="k">)</span>
-<span class="nv">DBUSER</span><span class="o">=</span><span class="k">$(</span>grep database_user /var/www/mail/inc/vars.inc.php <span class="p">|</span> cut -d<span class="s1">&#39;&quot;&#39;</span> -f2<span class="k">)</span>
-<span class="nv">DBPASS</span><span class="o">=</span><span class="k">$(</span>grep database_pass /var/www/mail/inc/vars.inc.php <span class="p">|</span> cut -d<span class="s1">&#39;&quot;&#39;</span> -f2<span class="k">)</span>
-
-<span class="c1"># Backup your tables</span>
-mysqldump --replace --no-create-info --default-character-set<span class="o">=</span>utf8mb4 <span class="se">\</span>
-    --host <span class="p">&amp;</span><span class="o">{</span>DBHOST<span class="o">}</span>-u<span class="si">${</span><span class="nv">DBUSER</span><span class="si">}</span> -p<span class="si">${</span><span class="nv">DBPASS</span><span class="si">}</span> <span class="si">${</span><span class="nv">DBNAME</span><span class="si">}</span> <span class="se">\</span>
-    <span class="nb">alias</span> alias_domain domain domain_admins mailbox quota2 sender_acl &gt; backup_mailcow.sql
+<h2 id="reset-mysql-passwords">Reset MySQL Passwords<a class="headerlink" href="#reset-mysql-passwords" title="Permanent link">&para;</a></h2>
+<p>Stop the stack by running <code>docker-compose stop</code>.</p>
+<p>When the containers came to a stop, run this command:</p>
+<div class="codehilite"><pre><span></span>docker-compose run --rm --entrypoint &#39;/bin/sh -c &quot;gosu mysql mysqld --skip-grant-tables &amp; sleep 10 &amp;&amp; mysql -hlocalhost -uroot &amp;&amp; exit 0&quot;&#39; mysql-mailcow
 </pre></div>
 
 
-<ul>
-<li><strong>--replace</strong>: Write <code>REPLACE</code> statements rather than <code>INSERT</code> statements</li>
-<li><strong>--no-create-info</strong>: Don't write <code>CREATE TABLE</code> statements.</li>
-<li><strong>--default-character-set</strong> make sure our exported default charset is <em>utf8mb4</em>.</li>
-</ul>
-<h2 id="prepare-mailcow-dockerized">Prepare mailcow: dockerized<a class="headerlink" href="#prepare-mailcow-dockerized" title="Permanent link">&para;</a></h2>
-<p>To initiate your fresh installed database, visit <strong>https://${MAILCOW_HOSTNAME}</strong> with a browser of your choice. Check if the DB is initiated correctly afterwards:</p>
-<div class="codehilite"><pre><span></span># source mailcow.conf
-# docker-compose exec mysql-mailcow mysql -u<span class="cp">${</span><span class="n">DBUSER</span><span class="cp">}</span> -p<span class="cp">${</span><span class="n">DBPASS</span><span class="cp">}</span> <span class="cp">${</span><span class="n">DBNAME</span><span class="cp">}</span>
-MariaDB [mailcow]&gt; show tables;
-+-------------------------------+
-| Tables_in_mailcow             |
-+-------------------------------+
-| admin                         |
-| alias                         |
-[...]
+<h3 id="146-find-database-name">1. Find database name<a class="headerlink" href="#146-find-database-name" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span>MariaDB [(none)]&gt; show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mailcow_database   | &lt;=====
+| mysql              |
+| performance_schema |
++--------------------+
+4 rows in set (0.00 sec)
 </pre></div>
 
 
-<h2 id="import-your-backups">Import your backups:<a class="headerlink" href="#import-your-backups" title="Permanent link">&para;</a></h2>
-<p><code># source mailcow.conf
-  # docker exec -i $(docker-compose ps -q mysql-mailcow) mysql -u${DBUSER} -p${DBPASS} ${DBNAME} &lt; backup_mailcow.sql</code></p>
-<p>Recalculate used quota with <code>doveadm</code>:</p>
-<p><code># docker-compose exec dovecot-mailcow doveadm quota recalc -A</code></p>
-<p>Restart services:</p>
-<p><code># docker-compose restart</code></p>
+<h3 id="246-reset-one-or-more-users">2. Reset one or more users<a class="headerlink" href="#246-reset-one-or-more-users" title="Permanent link">&para;</a></h3>
+<p>Both "password" and "authentication_string" exist. Currently "password" is used, but better set both.</p>
+<div class="codehilite"><pre><span></span>MariaDB [(none)]&gt; SELECT user FROM mysql.user;
++--------------+
+| user         |
++--------------+
+| mailcow_user | &lt;=====
+| root         |
++--------------+
+2 rows in set (0.00 sec)
+
+MariaDB [(none)]&gt; FLUSH PRIVILEGES;
+MariaDB [(none)]&gt; UPDATE mysql.user SET authentication_string = PASSWORD(&#39;gotr00t&#39;), password = PASSWORD(&#39;gotr00t&#39;) WHERE User = &#39;root&#39; AND Host = &#39;%&#39;;
+MariaDB [(none)]&gt; UPDATE mysql.user SET authentication_string = PASSWORD(&#39;mookuh&#39;), password = PASSWORD(&#39;mookuh&#39;) WHERE User = &#39;mailcow&#39; AND Host = &#39;%&#39;;
+MariaDB [(none)]&gt; FLUSH PRIVILEGES;
+</pre></div>
                 
                   
                 
@@ -899,7 +1095,7 @@ MariaDB [mailcow]&gt; show tables;
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../dns/" title="DNS Setup" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../attach_service/" title="Attach a Container" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -908,19 +1104,19 @@ MariaDB [mailcow]&gt; show tables;
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                DNS Setup
+                Attach a Container
               </span>
             </div>
           </a>
         
         
-          <a href="../install/" title="Installation" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../rm_volumes/" title="Remove Persistent Data" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Installation
+                Remove Persistent Data
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

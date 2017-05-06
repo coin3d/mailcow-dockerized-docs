@@ -15,7 +15,7 @@
     
     
       
-        <title>Setup a relayhost - mailcow: dockerized documentation</title>
+        <title>Deinstall - mailcow: dockerized documentation</title>
       
     
     
@@ -79,11 +79,11 @@
             
               
                 <span class="md-header-nav__parent">
-                  First Steps (optional)
+                  Usage & Examples
                 </span>
               
             
-            Setup a relayhost
+            Deinstall
           
         </span>
       </div>
@@ -310,12 +310,10 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
     
     <label class="md-nav__link" for="nav-5">
       First Steps (optional)
@@ -367,43 +365,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="toc">
-        Setup a relayhost
-      </label>
-    
-    <a href="./" title="Setup a relayhost" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../relayhost/" title="Setup a relayhost" class="md-nav__link">
       Setup a relayhost
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-  
-    <label class="md-nav__title" for="toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#helper-script" title="Helper script" class="md-nav__link">
-    Helper script
-  </a>
-  
-</li>
-      
-      
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -536,10 +502,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7" checked>
     
     <label class="md-nav__link" for="nav-7">
       Usage & Examples
@@ -843,11 +811,18 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../deinstall/" title="Deinstall" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+    
+    <a href="./" title="Deinstall" class="md-nav__link md-nav__link--active">
       Deinstall
     </a>
+    
   </li>
 
         
@@ -931,20 +906,6 @@
   
   
   
-    <label class="md-nav__title" for="toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#helper-script" title="Helper script" class="md-nav__link">
-    Helper script
-  </a>
-  
-</li>
-      
-      
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -955,42 +916,25 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/mailcow/mailcow-dockerized/edit/master/docs/relayhost.md" title="Edit this page" class="md-icon md-content__icon">edit</a>
+                  <a href="https://github.com/mailcow/mailcow-dockerized/edit/master/docs/deinstall.md" title="Edit this page" class="md-icon md-content__icon">edit</a>
                 
                 
-                  <h1>Setup a relayhost</h1>
+                  <h1>Deinstall</h1>
                 
-                <p>Insert these lines into <code>data/conf/postfix/main.cf</code>. "relayhost" does already exist (empty), just change its value.</p>
-<div class="codehilite"><pre><span></span>relayhost = [your-relayhost]:587
-smtp_sasl_password_maps = hash:/opt/postfix/conf/smarthost_passwd
-smtp_sasl_auth_enable = yes
+                <p>To remove mailcow: dockerized with all it's volumes, images and containers do:</p>
+<div class="codehilite"><pre><span></span>docker-compose down -v --rmi all --remove-orphans
 </pre></div>
 
 
-<p>Create the credentials file:</p>
-<div class="codehilite"><pre><span></span>echo &quot;your-relayhost username:password&quot; &gt; data/conf/postfix/smarthost_passwd
-</pre></div>
-
-
-<p>Run:</p>
-<div class="codehilite"><pre><span></span>docker-compose exec postfix-mailcow postmap /opt/postfix/conf/smarthost_passwd
-docker-compose exec postfix-mailcow chown root:postfix /opt/postfix/conf/smarthost_passwd /opt/postfix/conf/smarthost_passwd.db
-docker-compose exec postfix-mailcow chmod 660 /opt/postfix/conf/smarthost_passwd /opt/postfix/conf/smarthost_passwd.db
-docker-compose exec postfix-mailcow postfix reload
-</pre></div>
-
-
-<h3 id="helper-script">Helper script<a class="headerlink" href="#helper-script" title="Permanent link">&para;</a></h3>
-<p>There is a helper script <code>mailcow-setup-relayhost.sh</code> you can run to setup a relayhost.</p>
-<div class="codehilite"><pre><span></span>Usage:
-
-Setup a relayhost:
-./mailcow-setup-relayhost.sh relayhost port <span class="o">(</span>username<span class="o">)</span> <span class="o">(</span>password<span class="o">)</span>
-Username and password are optional parameters.
-
-Reset to defaults:
-./mailcow-setup-relayhost.sh reset
-</pre></div>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<ul>
+<li><strong>-v</strong> Remove named volumes declared in the <code>volumes</code> section of the Compose file and anonymous volumes attached to containers.</li>
+<li><strong>--rmi <type></strong> Remove images. Type must be one of: <code>all</code>: Remove all images used by any service. <code>local</code>: Remove only images that don't have a custom tag set by the <code>image</code> field.</li>
+<li><strong>--remove-orphans</strong> Remove containsers for services not defined in the compose file.</li>
+<li>By default <code>docker-compose down</code> only removes currently active containers and networks devinded in the <code>docker-compose.yml</code>.</li>
+</ul>
+</div>
                 
                   
                 
@@ -1009,7 +953,7 @@ Reset to defaults:
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../rp/" title="Reverse Proxy" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../dc_bash_compl/" title="Docker Compose Bash Completion" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -1018,19 +962,19 @@ Reset to defaults:
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Reverse Proxy
+                Docker Compose Bash Completion
               </span>
             </div>
           </a>
         
         
-          <a href="../syslog/" title="Log to Syslog" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../roundcube/" title="Roundcube" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Log to Syslog
+                Roundcube
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

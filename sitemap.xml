@@ -27,7 +27,7 @@
 
     
     <url>
-     <loc>/mc14_import/</loc>
+     <loc>/mc14_migrate/</loc>
      <lastmod>2017-05-06</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -104,19 +104,41 @@
     </url>
         
     <url>
-     <loc>/mailcow_ui/</loc>
+     <loc>/debug_logs/</loc>
      <lastmod>2017-05-06</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/attach_service/</loc>
+     <lastmod>2017-05-06</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/reset_pw/</loc>
+     <lastmod>2017-05-06</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/rm_volumes/</loc>
+     <lastmod>2017-05-06</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
+     <loc></loc>
+     <lastmod></lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/redis/</loc>
-     <lastmod>2017-05-06</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>/mysql/</loc>
      <lastmod>2017-05-06</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -128,7 +150,31 @@
     </url>
         
     <url>
+     <loc></loc>
+     <lastmod></lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
      <loc>/why_bind9/</loc>
+     <lastmod>2017-05-06</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc></loc>
+     <lastmod></lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/autodiscover_config/</loc>
+     <lastmod>2017-05-06</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/80_to_443/</loc>
      <lastmod>2017-05-06</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -152,49 +198,7 @@
     </url>
         
     <url>
-     <loc>/backup_maildir/</loc>
-     <lastmod>2017-05-06</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>/tfa/</loc>
-     <lastmod>2017-05-06</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>/80_to_443/</loc>
-     <lastmod>2017-05-06</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>/anonym_headers/</loc>
-     <lastmod>2017-05-06</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>/tagging/</loc>
-     <lastmod>2017-05-06</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>/bl_wl/</loc>
-     <lastmod>2017-05-06</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>/autodiscover_config/</loc>
-     <lastmod>2017-05-06</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>/disable_sender_verification/</loc>
+     <loc>/deinstall/</loc>
      <lastmod>2017-05-06</lastmod>
      <changefreq>daily</changefreq>
     </url>
