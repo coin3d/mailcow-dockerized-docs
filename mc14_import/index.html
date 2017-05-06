@@ -15,7 +15,7 @@
     
     
       
-        <title>MySQL - mailcow: dockerized documentation</title>
+        <title>Migrating from mailcow 0.14 - mailcow: dockerized documentation</title>
       
     
     
@@ -78,12 +78,8 @@
           
             
               
-                <span class="md-header-nav__parent">
-                  Usage & Examples
-                </span>
-              
             
-            MySQL
+            Migrating from mailcow 0.14
           
         </span>
       </div>
@@ -250,11 +246,57 @@
       
       
 
+  
 
-  <li class="md-nav__item">
-    <a href="../mc14_import/" title="Migrating from mailcow 0.14" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Migrating from mailcow 0.14
+      </label>
+    
+    <a href="./" title="Migrating from mailcow 0.14" class="md-nav__link md-nav__link--active">
       Migrating from mailcow 0.14
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#create-mailcow-db-backups" title="Create mailcow db backups" class="md-nav__link">
+    Create mailcow db backups
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prepare-mailcow-dockerized" title="Prepare mailcow: dockerized" class="md-nav__link">
+    Prepare mailcow: dockerized
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#import-your-backups" title="Import your backups:" class="md-nav__link">
+    Import your backups:
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
     
@@ -418,12 +460,10 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
     
     <label class="md-nav__link" for="nav-6">
       Usage & Examples
@@ -475,64 +515,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="toc">
-        MySQL
-      </label>
-    
-    <a href="./" title="MySQL" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../mysql/" title="MySQL" class="md-nav__link">
       MySQL
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-  
-    <label class="md-nav__title" for="toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#connect" title="Connect" class="md-nav__link">
-    Connect
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#backup" title="Backup" class="md-nav__link">
-    Backup
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#restore" title="Restore" class="md-nav__link">
-    Restore
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#reset-mysql-passwords" title="Reset MySQL passwords" class="md-nav__link">
-    Reset MySQL passwords
-  </a>
-  
-</li>
-      
-      
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -776,29 +763,22 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#connect" title="Connect" class="md-nav__link">
-    Connect
+  <a href="#create-mailcow-db-backups" title="Create mailcow db backups" class="md-nav__link">
+    Create mailcow db backups
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#backup" title="Backup" class="md-nav__link">
-    Backup
+  <a href="#prepare-mailcow-dockerized" title="Prepare mailcow: dockerized" class="md-nav__link">
+    Prepare mailcow: dockerized
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#restore" title="Restore" class="md-nav__link">
-    Restore
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#reset-mysql-passwords" title="Reset MySQL passwords" class="md-nav__link">
-    Reset MySQL passwords
+  <a href="#import-your-backups" title="Import your backups:" class="md-nav__link">
+    Import your backups:
   </a>
   
 </li>
@@ -817,70 +797,90 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/mailcow/mailcow-dockerized/edit/master/docs/mysql.md" title="Edit this page" class="md-icon md-content__icon">edit</a>
+                  <a href="https://github.com/mailcow/mailcow-dockerized/edit/master/docs/mc14_import.md" title="Edit this page" class="md-icon md-content__icon">edit</a>
                 
                 
-                  <h1>MySQL</h1>
+                  <h1>Migrating from mailcow 0.14</h1>
                 
-                <h3 id="connect">Connect<a class="headerlink" href="#connect" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span>source mailcow.conf
-docker-compose exec mysql-mailcow mysql -u<span class="cp">${</span><span class="n">DBUSER</span><span class="cp">}</span> -p<span class="cp">${</span><span class="n">DBPASS</span><span class="cp">}</span> <span class="cp">${</span><span class="n">DBNAME</span><span class="cp">}</span>
+                <p><strong>WARNING</strong> Please be adviced that this guide is a first draft. Mailcow: dockerized changed quite a lot on its DB configuration. It now uses the InnoDB file format <code>Barracuda</code> and the <code>utf8mb4</code> character set. There is also some change to the DB / TABLE structure.</p>
+<p>Also note that this guide doesn't touch on the users settings like <em>Spamlevels</em>, <em>TLS Settings</em>, etc. nor the export / import of your roundcube or SOGo settings.</p>
+<p>Lastly please check the section on how to <a href="../backup_maildir/#restore">import / restore</a> your maildir backup to get an idea how to migrate your mails.</p>
+<h2 id="create-mailcow-db-backups">Create mailcow db backups<a class="headerlink" href="#create-mailcow-db-backups" title="Permanent link">&para;</a></h2>
+<p>First you need to modify the table <code>mailcow</code>. Mailcow-dockerized adds three and moves two existing columns in the table <code>mailbox</code>. The columns <code>tls_enforce_in</code> and <code>tls_enforce_out</code> get moved two rows up (behind <code>domain</code>). The columns <code>key</code>, <code>multiple_bookings</code> and <code>wants_tagged_subject</code> need to be added after <code>tls_enforce_out</code>.</p>
+<p>It should look like this:</p>
+<div class="codehilite"><pre><span></span>MariaDB [mailcow]&gt; desc mailbox;
++----------------------+--------------+------+-----+-------------------+-----------------------------+
+| Field                | Type         | Null | Key | Default           | Extra                       |
++----------------------+--------------+------+-----+-------------------+-----------------------------+
+| username             | varchar(255) | NO   | PRI | NULL              |                             |
+| password             | varchar(255) | NO   |     | NULL              |                             |
+| name                 | varchar(255) | YES  |     | NULL              |                             |
+| maildir              | varchar(255) | NO   |     | NULL              |                             |
+| quota                | bigint(20)   | NO   |     | 0                 |                             |
+| local_part           | varchar(255) | NO   |     | NULL              |                             |
+| domain               | varchar(255) | NO   | MUL | NULL              |                             |
+| tls_enforce_in       | tinyint(1)   | NO   |     | 0                 |                             |
+| tls_enforce_out      | tinyint(1)   | NO   |     | 0                 |                             |
+| kind                 | varchar(100) | NO   |     |                   |                             |
+| multiple_bookings    | tinyint(1)   | NO   |     | 0                 |                             |
+| wants_tagged_subject | tinyint(1)   | NO   |     | 0                 |                             |
+| created              | datetime     | NO   |     | CURRENT_TIMESTAMP |                             |
+| modified             | datetime     | YES  |     | NULL              | on update CURRENT_TIMESTAMP |
+| active               | tinyint(1)   | NO   |     | 1                 |                             |
++----------------------+--------------+------+-----+-------------------+-----------------------------+
 </pre></div>
 
 
-<h3 id="backup">Backup<a class="headerlink" href="#backup" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span>cd /path/to/mailcow-dockerized
-source mailcow.conf
-DATE=$(date +&quot;%Y%m%d_%H%M%S&quot;)
-docker-compose exec mysql-mailcow mysqldump --default-character-set=utf8mb4 -u<span class="cp">${</span><span class="n">DBUSER</span><span class="cp">}</span> -p<span class="cp">${</span><span class="n">DBPASS</span><span class="cp">}</span> <span class="cp">${</span><span class="n">DBNAME</span><span class="cp">}</span> &gt; backup_<span class="cp">${</span><span class="n">DBNAME</span><span class="cp">}</span>_<span class="cp">${</span><span class="n">DATE</span><span class="cp">}</span>.sql
+<p>You can do this with a UI like <a href="https://www.adminer.org/#download">Adminer</a> or use the MySQL CLI like :</p>
+<div class="codehilite"><pre><span></span>MariaDB [mailcow]&gt; ALTER TABLE mailbox MODIFY COLUMN tls_enforce_in TINYINT(1) NOT NULL DEFAULT &#39;0&#39; AFTER domain,
+MODIFY COLUMN tls_enforce_out TINYINT(1) NOT NULL DEFAULT &#39;0&#39; AFTER tls_enforce_in;
+MariaDB [mailcow]&gt; ALTER TABLE mailbox ADD COLUMN `kind` VARCHAR(255) NOT NULL AFTER `tls_enforce_out`,
+ADD COLUMN `multiple_bookings` TINYINT(1) NOT NULL DEFAULT &#39;0&#39; AFTER `kind`,
+ADD COLUMN `wants_tagged_subject` TINYINT(1) NOT NULL DEFAULT &#39;0&#39; AFTER `multiple_bookings`;
+MariaDB [mailcow]&gt; DESC mailbox;
 </pre></div>
 
 
-<h3 id="restore">Restore<a class="headerlink" href="#restore" title="Permanent link">&para;</a></h3>
-<p>You should redirect the sql dump without Docker-Compose to prevent parsing errors.</p>
-<div class="codehilite"><pre><span></span>cd /path/to/mailcow-dockerized
-source mailcow.conf
-docker exec -i $(docker-compose ps -q mysql-mailcow) mysql -u<span class="cp">${</span><span class="n">DBUSER</span><span class="cp">}</span> -p<span class="cp">${</span><span class="n">DBPASS</span><span class="cp">}</span> <span class="cp">${</span><span class="n">DBNAME</span><span class="cp">}</span> <span class="nt">&lt; backup</span><span class="err">_file.sql</span>
+<p>When this is done we can backup the tables:</p>
+<div class="codehilite"><pre><span></span><span class="c1"># Load your mysql variables into environment</span>
+<span class="nv">DBHOST</span><span class="o">=</span><span class="k">$(</span>grep database_host /var/www/mail/inc/vars.inc.php <span class="p">|</span> cut -d<span class="s1">&#39;&quot;&#39;</span> -f2<span class="k">)</span>
+<span class="nv">DBNAME</span><span class="o">=</span><span class="k">$(</span>grep database_name /var/www/mail/inc/vars.inc.php <span class="p">|</span> cut -d<span class="s1">&#39;&quot;&#39;</span> -f2<span class="k">)</span>
+<span class="nv">DBUSER</span><span class="o">=</span><span class="k">$(</span>grep database_user /var/www/mail/inc/vars.inc.php <span class="p">|</span> cut -d<span class="s1">&#39;&quot;&#39;</span> -f2<span class="k">)</span>
+<span class="nv">DBPASS</span><span class="o">=</span><span class="k">$(</span>grep database_pass /var/www/mail/inc/vars.inc.php <span class="p">|</span> cut -d<span class="s1">&#39;&quot;&#39;</span> -f2<span class="k">)</span>
+
+<span class="c1"># Backup your tables</span>
+mysqldump --replace --no-create-info --default-character-set<span class="o">=</span>utf8mb4 <span class="se">\</span>
+    --host <span class="p">&amp;</span><span class="o">{</span>DBHOST<span class="o">}</span>-u<span class="si">${</span><span class="nv">DBUSER</span><span class="si">}</span> -p<span class="si">${</span><span class="nv">DBPASS</span><span class="si">}</span> <span class="si">${</span><span class="nv">DBNAME</span><span class="si">}</span> <span class="se">\</span>
+    <span class="nb">alias</span> alias_domain domain domain_admins mailbox quota2 sender_acl &gt; backup_mailcow.sql
 </pre></div>
 
 
-<h3 id="reset-mysql-passwords">Reset MySQL passwords<a class="headerlink" href="#reset-mysql-passwords" title="Permanent link">&para;</a></h3>
-<p>Stop the stack by running <code>docker-compose stop</code>.</p>
-<p>When the containers came to a stop, run this command:</p>
-<div class="codehilite"><pre><span></span>docker-compose run --rm --entrypoint &#39;/bin/sh -c &quot;gosu mysql mysqld --skip-grant-tables &amp; sleep 10 &amp;&amp; mysql -hlocalhost -uroot &amp;&amp; exit 0&quot;&#39; mysql-mailcow
+<ul>
+<li><strong>--replace</strong>: Write <code>REPLACE</code> statements rather than <code>INSERT</code> statements</li>
+<li><strong>--no-create-info</strong>: Don't write <code>CREATE TABLE</code> statements.</li>
+<li><strong>--default-character-set</strong> make sure our exported default charset is <em>utf8mb4</em>.</li>
+</ul>
+<h2 id="prepare-mailcow-dockerized">Prepare mailcow: dockerized<a class="headerlink" href="#prepare-mailcow-dockerized" title="Permanent link">&para;</a></h2>
+<p>To initiate your fresh installed database, visit <strong>https://${MAILCOW_HOSTNAME}</strong> with a browser of your choice. Check if the DB is initiated correctly afterwards:</p>
+<div class="codehilite"><pre><span></span># source mailcow.conf
+# docker-compose exec mysql-mailcow mysql -u<span class="cp">${</span><span class="n">DBUSER</span><span class="cp">}</span> -p<span class="cp">${</span><span class="n">DBPASS</span><span class="cp">}</span> <span class="cp">${</span><span class="n">DBNAME</span><span class="cp">}</span>
+MariaDB [mailcow]&gt; show tables;
++-------------------------------+
+| Tables_in_mailcow             |
++-------------------------------+
+| admin                         |
+| alias                         |
+[...]
 </pre></div>
 
 
-<p><strong>1. Find database name</strong></p>
-<div class="codehilite"><pre><span></span>MariaDB [(none)]&gt; show databases;
-+--------------------+
-| Database           |
-+--------------------+
-| information_schema |
-| mailcow_database   | &lt;=====
-| mysql              |
-| performance_schema |
-+--------------------+
-4 rows in set (0.00 sec)
-</pre></div>
-
-
-<p><strong>2. Reset one or more users</strong></p>
-<p>Both "password" and "authentication_string" exist. Currently "password" is used, but better set both.</p>
-<div class="codehilite"><pre><span></span>MariaDB [(none)]&gt; SELECT user FROM mysql.user;
-+--------------+
-| user         |
-+--------------+
-| mailcow_user | &lt;=====
-| root         |
-+--------------+
-2 rows in set (0.00 sec)
-
-MariaDB [(none)]&gt; FLUSH PRIVILEGES;
-MariaDB [(none)]&gt; UPDATE mysql.user SET authentication_string = PASSWORD(&#39;gotr00t&#39;), password = PASSWORD(&#39;gotr00t&#39;) WHERE User = &#39;root&#39; AND Host = &#39;%&#39;;
-MariaDB [(none)]&gt; UPDATE mysql.user SET authentication_string = PASSWORD(&#39;mookuh&#39;), password = PASSWORD(&#39;mookuh&#39;) WHERE User = &#39;mailcow&#39; AND Host = &#39;%&#39;;
-MariaDB [(none)]&gt; FLUSH PRIVILEGES;
-</pre></div>
+<h2 id="import-your-backups">Import your backups:<a class="headerlink" href="#import-your-backups" title="Permanent link">&para;</a></h2>
+<p><code># source mailcow.conf
+  # docker exec -i $(docker-compose ps -q mysql-mailcow) mysql -u${DBUSER} -p${DBPASS} ${DBNAME} &lt; backup_mailcow.sql</code></p>
+<p>Recalculate used quota with <code>doveadm</code>:</p>
+<p><code># docker-compose exec dovecot-mailcow doveadm quota recalc -A</code></p>
+<p>Restart services:</p>
+<p><code># docker-compose restart</code></p>
                 
                   
                 
@@ -899,7 +899,7 @@ MariaDB [(none)]&gt; FLUSH PRIVILEGES;
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../redis/" title="Redis" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../dns/" title="DNS Setup" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -908,19 +908,19 @@ MariaDB [(none)]&gt; FLUSH PRIVILEGES;
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Redis
+                DNS Setup
               </span>
             </div>
           </a>
         
         
-          <a href="../rspamd/" title="Rspamd" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../install/" title="Installation" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Rspamd
+                Installation
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

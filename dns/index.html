@@ -15,7 +15,7 @@
     
     
       
-        <title>MySQL - mailcow: dockerized documentation</title>
+        <title>DNS Setup - mailcow: dockerized documentation</title>
       
     
     
@@ -79,11 +79,11 @@
             
               
                 <span class="md-header-nav__parent">
-                  Usage & Examples
+                  Prerequisites
                 </span>
               
             
-            MySQL
+            DNS Setup
           
         </span>
       </div>
@@ -202,10 +202,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
     
     <label class="md-nav__link" for="nav-2">
       Prerequisites
@@ -233,11 +235,85 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../dns/" title="DNS Setup" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        DNS Setup
+      </label>
+    
+    <a href="./" title="DNS Setup" class="md-nav__link md-nav__link--active">
       DNS Setup
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#references" title="References" class="md-nav__link">
+    References
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reverse-dns-of-your-ip" title="Reverse DNS of your IP" class="md-nav__link">
+    Reverse DNS of your IP
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-minimal-dns-configuration" title="The minimal DNS configuration" class="md-nav__link">
+    The minimal DNS configuration
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dkim-spf-and-dmarc" title="DKIM, SPF and DMARC" class="md-nav__link">
+    DKIM, SPF and DMARC
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-advanced-dns-configuration" title="The advanced DNS configuration" class="md-nav__link">
+    The advanced DNS configuration
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#testing" title="Testing" class="md-nav__link">
+    Testing
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#misc" title="Misc" class="md-nav__link">
+    Misc
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -418,12 +494,10 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
     
     <label class="md-nav__link" for="nav-6">
       Usage & Examples
@@ -475,64 +549,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="toc">
-        MySQL
-      </label>
-    
-    <a href="./" title="MySQL" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../mysql/" title="MySQL" class="md-nav__link">
       MySQL
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-  
-    <label class="md-nav__title" for="toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#connect" title="Connect" class="md-nav__link">
-    Connect
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#backup" title="Backup" class="md-nav__link">
-    Backup
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#restore" title="Restore" class="md-nav__link">
-    Restore
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#reset-mysql-passwords" title="Reset MySQL passwords" class="md-nav__link">
-    Reset MySQL passwords
-  </a>
-  
-</li>
-      
-      
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -776,29 +797,50 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#connect" title="Connect" class="md-nav__link">
-    Connect
+  <a href="#references" title="References" class="md-nav__link">
+    References
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#backup" title="Backup" class="md-nav__link">
-    Backup
+  <a href="#reverse-dns-of-your-ip" title="Reverse DNS of your IP" class="md-nav__link">
+    Reverse DNS of your IP
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#restore" title="Restore" class="md-nav__link">
-    Restore
+  <a href="#the-minimal-dns-configuration" title="The minimal DNS configuration" class="md-nav__link">
+    The minimal DNS configuration
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#reset-mysql-passwords" title="Reset MySQL passwords" class="md-nav__link">
-    Reset MySQL passwords
+  <a href="#dkim-spf-and-dmarc" title="DKIM, SPF and DMARC" class="md-nav__link">
+    DKIM, SPF and DMARC
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-advanced-dns-configuration" title="The advanced DNS configuration" class="md-nav__link">
+    The advanced DNS configuration
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#testing" title="Testing" class="md-nav__link">
+    Testing
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#misc" title="Misc" class="md-nav__link">
+    Misc
   </a>
   
 </li>
@@ -817,69 +859,73 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/mailcow/mailcow-dockerized/edit/master/docs/mysql.md" title="Edit this page" class="md-icon md-content__icon">edit</a>
+                  <a href="https://github.com/mailcow/mailcow-dockerized/edit/master/docs/dns.md" title="Edit this page" class="md-icon md-content__icon">edit</a>
                 
                 
-                  <h1>MySQL</h1>
+                  <h1>DNS Setup</h1>
                 
-                <h3 id="connect">Connect<a class="headerlink" href="#connect" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span>source mailcow.conf
-docker-compose exec mysql-mailcow mysql -u<span class="cp">${</span><span class="n">DBUSER</span><span class="cp">}</span> -p<span class="cp">${</span><span class="n">DBPASS</span><span class="cp">}</span> <span class="cp">${</span><span class="n">DBNAME</span><span class="cp">}</span>
+                <p>Below you can find a list of <strong>recommended DNS records</strong>. While some are mandatory for a mail server (A, MX), others are recommended to build a good reputation score (TXT/SPF) or used for auto-configuration of mail clients (SRV).</p>
+<h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>
+<ul>
+<li>A good article covering all relevant topics:
+  <a href="https://www.rackaid.com/blog/email-dns-records">"3 DNS Records Every Email Marketer Must Know"</a>      </li>
+<li>Another great one, but Zimbra as an example platform:
+  <a href="https://wiki.zimbra.com/wiki/Best_Practices_on_Email_Protection:_SPF,_DKIM_and_DMARC">"Best Practices on Email Protection: SPF, DKIM and DMARC"</a>       </li>
+<li>An in-depth discussion of SPF, DKIM and DMARC:
+  <a href="https://www.skelleton.net/2015/03/21/how-to-eliminate-spam-and-protect-your-name-with-dmarc/">"How to eliminate spam and protect your name with DMARC"</a></li>
+</ul>
+<h2 id="reverse-dns-of-your-ip">Reverse DNS of your IP<a class="headerlink" href="#reverse-dns-of-your-ip" title="Permanent link">&para;</a></h2>
+<p>Make sure that the PTR record of your IP matches the FQDN hostname of your mailcow host: <code>mail.domain.tld</code>. This record is usually set at the provider you leased the IP (server) from.</p>
+<h2 id="the-minimal-dns-configuration">The minimal DNS configuration<a class="headerlink" href="#the-minimal-dns-configuration" title="Permanent link">&para;</a></h2>
+<p>This example shows you a set of records for one domain managed by mailcow. Each domain that is added to mailcow needs at least this set or records to function correctly.</p>
+<div class="codehilite"><pre><span></span># Name              Type       Value
+mail                IN A       1.2.3.4
+autodiscover        IN A       1.2.3.4
+autoconfig          IN A       1.2.3.4
+
+@                   IN MX 10   mail
 </pre></div>
 
 
-<h3 id="backup">Backup<a class="headerlink" href="#backup" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span>cd /path/to/mailcow-dockerized
-source mailcow.conf
-DATE=$(date +&quot;%Y%m%d_%H%M%S&quot;)
-docker-compose exec mysql-mailcow mysqldump --default-character-set=utf8mb4 -u<span class="cp">${</span><span class="n">DBUSER</span><span class="cp">}</span> -p<span class="cp">${</span><span class="n">DBPASS</span><span class="cp">}</span> <span class="cp">${</span><span class="n">DBNAME</span><span class="cp">}</span> &gt; backup_<span class="cp">${</span><span class="n">DBNAME</span><span class="cp">}</span>_<span class="cp">${</span><span class="n">DATE</span><span class="cp">}</span>.sql
+<h2 id="dkim-spf-and-dmarc">DKIM, SPF and DMARC<a class="headerlink" href="#dkim-spf-and-dmarc" title="Permanent link">&para;</a></h2>
+<p>In the example DNS zone file snippet below, a simple <strong>SPF</strong> TXT record is used to only allow THIS server (the MX) to send mail for your domain. Every other server is disallowed but able to ("<code>~all</code>"). Please refer to <a href="http://www.openspf.org">SPF Project</a>.</p>
+<div class="codehilite"><pre><span></span>@                   IN TXT     &quot;v=spf1 mx ~all&quot;
 </pre></div>
 
 
-<h3 id="restore">Restore<a class="headerlink" href="#restore" title="Permanent link">&para;</a></h3>
-<p>You should redirect the sql dump without Docker-Compose to prevent parsing errors.</p>
-<div class="codehilite"><pre><span></span>cd /path/to/mailcow-dockerized
-source mailcow.conf
-docker exec -i $(docker-compose ps -q mysql-mailcow) mysql -u<span class="cp">${</span><span class="n">DBUSER</span><span class="cp">}</span> -p<span class="cp">${</span><span class="n">DBPASS</span><span class="cp">}</span> <span class="cp">${</span><span class="n">DBNAME</span><span class="cp">}</span> <span class="nt">&lt; backup</span><span class="err">_file.sql</span>
+<p>It is highly recommended to create a <strong>DKIM</strong> TXT record in your mailcow UI and set the corresponding TXT record in your DNS records. Please refer to <a href="http://www.opendkim.org">OpenDKIM</a>.</p>
+<div class="codehilite"><pre><span></span>default._domainkey  IN TXT     &quot;v=DKIM1; k=rsa; t=s; s=email; p=...&quot;
 </pre></div>
 
 
-<h3 id="reset-mysql-passwords">Reset MySQL passwords<a class="headerlink" href="#reset-mysql-passwords" title="Permanent link">&para;</a></h3>
-<p>Stop the stack by running <code>docker-compose stop</code>.</p>
-<p>When the containers came to a stop, run this command:</p>
-<div class="codehilite"><pre><span></span>docker-compose run --rm --entrypoint &#39;/bin/sh -c &quot;gosu mysql mysqld --skip-grant-tables &amp; sleep 10 &amp;&amp; mysql -hlocalhost -uroot &amp;&amp; exit 0&quot;&#39; mysql-mailcow
+<p>The last step in protecting yourself and others is the implementation of a <strong>DMARC</strong> TXT record, for example by using the <a href="http://www.kitterman.com/dmarc/assistant.html">DMARC Assistant</a> (<a href="https://dmarcian.com/dmarc-inspector/google.com">check</a>).</p>
+<div class="codehilite"><pre><span></span>_dmarc              IN TXT     &quot;v=DMARC1; p=reject; rua=mailto:mailauth-reports@example.org&quot;
 </pre></div>
 
 
-<p><strong>1. Find database name</strong></p>
-<div class="codehilite"><pre><span></span>MariaDB [(none)]&gt; show databases;
-+--------------------+
-| Database           |
-+--------------------+
-| information_schema |
-| mailcow_database   | &lt;=====
-| mysql              |
-| performance_schema |
-+--------------------+
-4 rows in set (0.00 sec)
+<h2 id="the-advanced-dns-configuration">The advanced DNS configuration<a class="headerlink" href="#the-advanced-dns-configuration" title="Permanent link">&para;</a></h2>
+<p><strong>SRV</strong> records specify the server(s) for a specific protocol on your domain. If you want to explicitly announce a service as not provided, give "." as the target address (instead of "mail.example.tld."). Please refer to <a href="https://tools.ietf.org/html/rfc2782">RFC 2782</a>.</p>
+<div class="codehilite"><pre><span></span>_imap._tcp          IN SRV     0 1 143 mail.example.org.
+_imaps._tcp         IN SRV     0 1 993 mail.example.org.
+_pop3._tcp          IN SRV     0 1 110 mail.example.org.
+_pop3s._tcp         IN SRV     0 1 995 mail.example.org.
+_submission._tcp    IN SRV     0 1 587 mail.example.org.
+_autoconfig._tcp    IN SRV     0 1 443 autoconfig.example.org.
+_autodiscover._tcp  IN SRV     0 1 443 autodiscover.example.org.
 </pre></div>
 
 
-<p><strong>2. Reset one or more users</strong></p>
-<p>Both "password" and "authentication_string" exist. Currently "password" is used, but better set both.</p>
-<div class="codehilite"><pre><span></span>MariaDB [(none)]&gt; SELECT user FROM mysql.user;
-+--------------+
-| user         |
-+--------------+
-| mailcow_user | &lt;=====
-| root         |
-+--------------+
-2 rows in set (0.00 sec)
-
-MariaDB [(none)]&gt; FLUSH PRIVILEGES;
-MariaDB [(none)]&gt; UPDATE mysql.user SET authentication_string = PASSWORD(&#39;gotr00t&#39;), password = PASSWORD(&#39;gotr00t&#39;) WHERE User = &#39;root&#39; AND Host = &#39;%&#39;;
-MariaDB [(none)]&gt; UPDATE mysql.user SET authentication_string = PASSWORD(&#39;mookuh&#39;), password = PASSWORD(&#39;mookuh&#39;) WHERE User = &#39;mailcow&#39; AND Host = &#39;%&#39;;
-MariaDB [(none)]&gt; FLUSH PRIVILEGES;
+<h2 id="testing">Testing<a class="headerlink" href="#testing" title="Permanent link">&para;</a></h2>
+<p>Here are some tools you can use to verify your DNS configuration:</p>
+<ul>
+<li><a href="https://mxtoolbox.com/SuperTool.aspx">MX Toolbox</a> (DNS, SMTP, RBL)</li>
+<li><a href="https://www.port25.com/dkim-wizard/">port25.com</a> (DKIM, SPF)</li>
+<li><a href="https://www.had-pilot.com/testdetails.html">HAD Pilot</a> (DKIM, DMARC, SPF)</li>
+<li><a href="https://www.dmarcanalyzer.com/spf-record-check/">DMARC Analyzer</a> (DMARC, SPF)</li>
+</ul>
+<h2 id="misc">Misc<a class="headerlink" href="#misc" title="Permanent link">&para;</a></h2>
+<p>If you are interested in statistics, you can additionally register with the <a href="https://gmail.com/postmaster">Postmaster Tool</a>  by Google and supply a <strong>google-site-verification</strong> TXT record, which will give you details about spam-classified mails by your domain. This is clearly optional.</p>
+<div class="codehilite"><pre><span></span>@                   IN TXT     &quot;google-site-verification=...&quot;
 </pre></div>
                 
                   
@@ -899,7 +945,7 @@ MariaDB [(none)]&gt; FLUSH PRIVILEGES;
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../redis/" title="Redis" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../requirements/" title="Prepare Your System" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -908,19 +954,19 @@ MariaDB [(none)]&gt; FLUSH PRIVILEGES;
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Redis
+                Prepare Your System
               </span>
             </div>
           </a>
         
         
-          <a href="../rspamd/" title="Rspamd" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../mc14_import/" title="Migrating from mailcow 0.14" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Rspamd
+                Migrating from mailcow 0.14
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
