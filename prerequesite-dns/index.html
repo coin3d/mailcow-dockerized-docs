@@ -1039,7 +1039,7 @@ autoconfig          IN A       1.2.3.4
 
 
 <p>It is highly recommended to create a <strong>DKIM</strong> TXT record in your mailcow UI and set the corresponding TXT record in your DNS records. Please refer to <a href="http://www.opendkim.org">OpenDKIM</a> for further reading.</p>
-<div class="codehilite"><pre><span></span>default._domainkey  IN TXT     &quot;v=DKIM1; k=rsa; t=s; s=email; p=...&quot;
+<div class="codehilite"><pre><span></span>dkim._domainkey  IN TXT     &quot;v=DKIM1; k=rsa; t=s; s=email; p=...&quot;
 </pre></div>
 
 
