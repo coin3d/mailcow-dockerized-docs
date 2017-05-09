@@ -1050,7 +1050,7 @@
 <div class="admonition info">
 <p class="admonition-title">Info</p>
 <ul>
-<li>Mailcow: dockerized requires <a href="#default-ports">some ports</a> to be open for incomming connections, so make sure that your firewall is not bloking these. Also make sure that no other application is interferring with mailcow's configuration.</li>
+<li>Mailcow: dockerized requires <a href="#default-ports">some ports</a> to be open for incoming connections, so make sure that your firewall is not blocking these. Also make sure that no other application is interfering with mailcow's configuration.</li>
 <li>A correct DNS setup is crucial to every good mailserver setup, so please make sure you got at least the <a href="../prerequesite-dns/#the-minimal-dns-configuration">basics</a> covered bevore you begin!</li>
 <li>Make sure that your system has a correct date and <a href="#date-and-time">time setup</a>. This is crucial for stuff like two factor TOTP authentication.</li>
 </ul>
@@ -1091,7 +1091,7 @@
 
 <p>If this command returns any results please remove or stop the application running on that port. You may also adjust mailcows ports via the <code>mailcow.conf</code> configuration file.</p>
 <h3 id="default-ports">Default Ports<a class="headerlink" href="#default-ports" title="Permanent link">&para;</a></h3>
-<p>If you have a firewall already up and running please make sure that these ports are open for incomming connections:</p>
+<p>If you have a firewall already up and running please make sure that these ports are open for incoming connections:</p>
 <table>
 <thead>
 <tr>
@@ -1188,7 +1188,7 @@ NTP synchronized: yes
 </pre></div>
 
 
-<p>The lines <code>NTP enabled: yes</code> and <code>NTP synchronized: yes</code> indicate wether you have NTP enabled and if it's syncronized.</p>
+<p>The lines <code>NTP enabled: yes</code> and <code>NTP synchronized: yes</code> indicate wether you have NTP enabled and if it's synchronized.</p>
 <p>To enable NTP you need to run the command <code>timedatectl set-ntp true</code>. You also need to edit your <code>/etc/systemd/timesyncd.conf</code>:</p>
 <div class="codehilite"><pre><span></span># vim /etc/systemd/timesyncd.conf
 [Time]

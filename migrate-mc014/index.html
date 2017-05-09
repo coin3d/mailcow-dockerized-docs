@@ -1105,12 +1105,19 @@ MariaDB [mailcow]&gt; show tables;
 
 
 <h2 id="import-your-backups">Import your backups:<a class="headerlink" href="#import-your-backups" title="Permanent link">&para;</a></h2>
-<p><code># source mailcow.conf
-  # docker exec -i $(docker-compose ps -q mysql-mailcow) mysql -u${DBUSER} -p${DBPASS} ${DBNAME} &lt; backup_mailcow.sql</code></p>
+<div class="codehilite"><pre><span></span># source mailcow.conf
+# docker exec -i $(docker-compose ps -q mysql-mailcow) mysql -u<span class="cp">${</span><span class="n">DBUSER</span><span class="cp">}</span> -p<span class="cp">${</span><span class="n">DBPASS</span><span class="cp">}</span> <span class="cp">${</span><span class="n">DBNAME</span><span class="cp">}</span> <span class="nt">&lt; backup</span><span class="err">_mailcow.sql</span>
+</pre></div>
+
+
 <p>Recalculate used quota with <code>doveadm</code>:</p>
-<p><code># docker-compose exec dovecot-mailcow doveadm quota recalc -A</code></p>
+<div class="codehilite"><pre><span></span># docker-compose exec dovecot-mailcow doveadm quota recalc -A
+</pre></div>
+
+
 <p>Restart services:</p>
-<p><code># docker-compose restart</code></p>
+<div class="codehilite"><pre><span></span># docker-compose restart
+</pre></div>
                 
                   
                 

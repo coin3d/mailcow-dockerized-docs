@@ -1056,13 +1056,13 @@ git stash pop
 
 
 <h3 id="step-1-method-2">Step 1, method 2<a class="headerlink" href="#step-1-method-2" title="Permanent link">&para;</a></h3>
-<p>Fetch new data from GitHub, commit changes and merge remote repository: </p>
+<p>Fetch new data from GitHub, commit changes and merge remote repository:</p>
 <div class="codehilite"><pre><span></span># Get updates/changes
 git fetch
 # Add all changed files to local clone
 git add -A
 # Commit changes, ignore git complaining about username and mail address
-git commit -m &quot;Local config aat $(date)&quot;
+git commit -m &quot;Local config at $(date)&quot;
 # Merge changes
 git merge
 </pre></div>
@@ -1083,9 +1083,9 @@ git merge
 <li>Stop and remove mailcow containers: <code>docker-compose down</code></li>
 <li>Delete the directory or rename it</li>
 <li>Clone the remote repository again (<code>git clone https://github.com/andryyy/mailcow-dockerized &amp;&amp; cd mailcow-dockerized</code>). <strong>Pay attention</strong> to this step - the folder must have the same name of the previous one!</li>
-<li>Copy back your previous <code>mailcow.conf</code> into the mailcow-dockerizd folder </li>
+<li>Copy back your previous <code>mailcow.conf</code> into the mailcow-dockerizd folder</li>
 </ul>
-<p>If you forgot to stop Docker before deleting the cloned directoy, you can use the following commands:</p>
+<p>If you forgot to stop Docker before deleting the cloned directory, you can use the following commands:</p>
 <div class="codehilite"><pre><span></span>docker stop $(docker ps -a -q)
 docker rm $(docker ps -a -q)
 </pre></div>

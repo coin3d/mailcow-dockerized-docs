@@ -1028,8 +1028,7 @@
                 
                   <h1>MySQL</h1>
                 
-                <p>MySQL is used to store the settings and / or usertables of the whole mail-stack (mailcow UI, SOGo, dovecot, postfix).</p>
-<h2 id="backup">Backup<a class="headerlink" href="#backup" title="Permanent link">&para;</a></h2>
+                <h2 id="backup">Backup<a class="headerlink" href="#backup" title="Permanent link">&para;</a></h2>
 <div class="codehilite"><pre><span></span>cd /path/to/mailcow-dockerized
 source mailcow.conf
 DATE=$(date +&quot;%Y%m%d_%H%M%S&quot;)
@@ -1038,7 +1037,10 @@ docker-compose exec mysql-mailcow mysqldump --default-character-set=utf8mb4 -u<s
 
 
 <h2 id="restore">Restore<a class="headerlink" href="#restore" title="Permanent link">&para;</a></h2>
-<p>You should redirect the sql dump without Docker-Compose to prevent parsing errors.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>You should redirect the SQL dump without <code>docker-compose</code> to prevent parsing errors.</p>
+</div>
 <div class="codehilite"><pre><span></span>cd /path/to/mailcow-dockerized
 source mailcow.conf
 docker exec -i $(docker-compose ps -q mysql-mailcow) mysql -u<span class="cp">${</span><span class="n">DBUSER</span><span class="cp">}</span> -p<span class="cp">${</span><span class="n">DBPASS</span><span class="cp">}</span> <span class="cp">${</span><span class="n">DBNAME</span><span class="cp">}</span> <span class="nt">&lt; backup</span><span class="err">_file.sql</span>

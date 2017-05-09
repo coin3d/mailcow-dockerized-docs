@@ -1005,7 +1005,7 @@
                 
                   <h1>Anonymize Headers</h1>
                 
-                <p>Save as <code>data/conf/postfix/mailcow_anonymize_headers.pcre</code>:</p>
+                <p>To disguise your users details like IP, email client, etc. we have to create a new file in <code>data/conf/postfix/mailcow_anonymize_headers.pcre</code> and insert the following:</p>
 <div class="codehilite"><pre><span></span>/^\s*Received:[^\)]+\)\s+\(Authenticated sender:(.+)/
     REPLACE Received: from localhost (localhost [127.0.0.1]) (Authenticated sender:$1
 /^\s*User-Agent/        IGNORE
@@ -1016,7 +1016,7 @@
 </pre></div>
 
 
-<p>Add this to <code>data/conf/postfix/main.cf</code>:</p>
+<p>Next we need to add the following to <code>data/conf/postfix/main.cf</code>:</p>
 <div class="codehilite"><pre><span></span>smtp_header_checks = pcre:/opt/postfix/conf/mailcow_anonymize_headers.pcre
 </pre></div>
                 

@@ -1098,7 +1098,7 @@ MariaDB [(none)]&gt; FLUSH PRIVILEGES;
 
 
 <h2 id="remove-two-factor-authentication">Remove Two-Factor Authentication<a class="headerlink" href="#remove-two-factor-authentication" title="Permanent link">&para;</a></h2>
-<p>This works similar to resetting a MySQL password, now we do it from the host without connecting to the MySQL cli:</p>
+<p>This works similar to resetting a MySQL password, now we do it from the host without connecting to the MySQL CLI:</p>
 <div class="codehilite"><pre><span></span>source mailcow.conf
 docker-compose exec mysql-mailcow mysql -u<span class="cp">${</span><span class="n">DBUSER</span><span class="cp">}</span> -p<span class="cp">${</span><span class="n">DBPASS</span><span class="cp">}</span> <span class="cp">${</span><span class="n">DBNAME</span><span class="cp">}</span> -e &quot;DELETE FROM tfa WHERE username=&#39;YOUR_USERNAME&#39;;&quot;
 </pre></div>

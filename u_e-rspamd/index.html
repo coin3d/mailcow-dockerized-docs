@@ -1080,13 +1080,13 @@
                 
                   <h1>Rspamd</h1>
                 
-                <p>Rspamd is used for av handling, dkim signing and spam handling. It's a powerfull and fast filter system. For a more in-depth documentation on Rspamd please visit it's <a href="https://rspamd.com/doc/index.html">own documentation</a>.</p>
+                <p>Rspamd is used for AV handling, DKIM signing and SPAM handling. It's a powerful and fast filter system. For a more in-depth documentation on Rspamd please visit it's <a href="https://rspamd.com/doc/index.html">own documentation</a>.</p>
 <h2 id="learn-spam-ham">Learn Spam &amp; Ham<a class="headerlink" href="#learn-spam-ham" title="Permanent link">&para;</a></h2>
 <p>Rspamd learns mail as spam or ham when you move a message in or out of the junk folder to any mailbox besides trash.
 This is archived by using the Dovecot plugin "antispam" and a simple parser script.</p>
 <p>Rspamd also auto-learns mail when a high or low score is detected (see <a href="https://rspamd.com/doc/configuration/statistic.html#autolearning">https://rspamd.com/doc/configuration/statistic.html#autolearning</a>)</p>
 <p>The bayes statistics are written to Redis as keys <code>BAYES_HAM</code> and <code>BAYES_SPAM</code>.</p>
-<p>You can also use Rspamd's web ui to learn ham and/or spam.</p>
+<p>You can also use Rspamd's web UI to learn ham and / or spam or to adjust certain settings of Rspamd.</p>
 <h3 id="learn-spam-or-ham-from-existing-directory">Learn Spam or Ham from existing directory<a class="headerlink" href="#learn-spam-or-ham-from-existing-directory" title="Permanent link">&para;</a></h3>
 <p>You can use a one-liner to learn mail in plain-text (uncompressed) format:</p>
 <div class="codehilite"><pre><span></span># Ham

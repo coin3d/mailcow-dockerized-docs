@@ -1127,7 +1127,7 @@
 
 
 <h3 id="connecting-to-services">Connecting to Services<a class="headerlink" href="#connecting-to-services" title="Permanent link">&para;</a></h3>
-<p>If you whant to connect to a service / application directly it is always a good idea to <code>source mailcow.conf</code> to get all relevant variables in your environment.</p>
+<p>If you want to connect to a service / application directly it is always a good idea to <code>source mailcow.conf</code> to get all relevant variables into your environment.</p>
 <h4 id="mysql">MySQL<a class="headerlink" href="#mysql" title="Permanent link">&para;</a></h4>
 <div class="codehilite"><pre><span></span>source mailcow.conf
 docker-compose exec mysql-mailcow mysql -u<span class="cp">${</span><span class="n">DBUSER</span><span class="cp">}</span> -p<span class="cp">${</span><span class="n">DBPASS</span><span class="cp">}</span> <span class="cp">${</span><span class="n">DBNAME</span><span class="cp">}</span>
@@ -1167,7 +1167,7 @@ docker-compose exec mysql-mailcow mysql -u<span class="cp">${</span><span class=
 </tr>
 <tr>
 <td>redis-mailcow</td>
-<td>Storage backend for DKIM keys, Rmilter and Rspamd</td>
+<td>Storage back-end for DKIM keys, Rmilter and Rspamd</td>
 </tr>
 <tr>
 <td>rspamd-mailcow</td>
