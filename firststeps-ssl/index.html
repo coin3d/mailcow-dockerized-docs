@@ -335,82 +335,9 @@
       
     
     
-      <label class="md-nav__link md-nav__link--active" for="toc">
-        SSL
-      </label>
-    
     <a href="./" title="SSL" class="md-nav__link md-nav__link--active">
       SSL
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-  
-    <label class="md-nav__title" for="toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#lets-encrypt" title="Let's Encrypt" class="md-nav__link">
-    Let's Encrypt
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#146-get-the-certbot-client" title="1. Get the certbot client:" class="md-nav__link">
-    1. Get the certbot client:
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#246-make-sure-you-set-http_bind0000-and-http_port80-in-mailcowconf-or-setup-a-reverse-proxy-to-enable-connections-to-port-80-if-you-changed-http_bind-then-rebuild-nginx" title="2. Make sure you set HTTP_BIND=0.0.0.0 and HTTP_PORT=80 in mailcow.conf or setup a reverse proxy to enable connections to port 80. If you changed HTTP_BIND, then rebuild Nginx:" class="md-nav__link">
-    2. Make sure you set HTTP_BIND=0.0.0.0 and HTTP_PORT=80 in mailcow.conf or setup a reverse proxy to enable connections to port 80. If you changed HTTP_BIND, then rebuild Nginx:
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#346-request-the-certificate-with-the-webroot-method" title="3. Request the certificate with the webroot method:" class="md-nav__link">
-    3. Request the certificate with the webroot method:
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#446-create-hard-links-to-the-full-path-of-the-new-certificates-assuming-you-are-still-in-the-mailcow-root-folder" title="4. Create hard links to the full path of the new certificates. Assuming you are still in the mailcow root folder:" class="md-nav__link">
-    4. Create hard links to the full path of the new certificates. Assuming you are still in the mailcow root folder:
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#546-restart-affected-containers" title="5. Restart affected containers:" class="md-nav__link">
-    5. Restart affected containers:
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#check-your-configuration" title="Check your configuration" class="md-nav__link">
-    Check your configuration
-  </a>
-  
-</li>
-      
-      
-      
-    </ul>
-  
-</nav>
     
   </li>
 
@@ -1067,47 +994,6 @@
     Let's Encrypt
   </a>
   
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#146-get-the-certbot-client" title="1. Get the certbot client:" class="md-nav__link">
-    1. Get the certbot client:
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#246-make-sure-you-set-http_bind0000-and-http_port80-in-mailcowconf-or-setup-a-reverse-proxy-to-enable-connections-to-port-80-if-you-changed-http_bind-then-rebuild-nginx" title="2. Make sure you set HTTP_BIND=0.0.0.0 and HTTP_PORT=80 in mailcow.conf or setup a reverse proxy to enable connections to port 80. If you changed HTTP_BIND, then rebuild Nginx:" class="md-nav__link">
-    2. Make sure you set HTTP_BIND=0.0.0.0 and HTTP_PORT=80 in mailcow.conf or setup a reverse proxy to enable connections to port 80. If you changed HTTP_BIND, then rebuild Nginx:
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#346-request-the-certificate-with-the-webroot-method" title="3. Request the certificate with the webroot method:" class="md-nav__link">
-    3. Request the certificate with the webroot method:
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#446-create-hard-links-to-the-full-path-of-the-new-certificates-assuming-you-are-still-in-the-mailcow-root-folder" title="4. Create hard links to the full path of the new certificates. Assuming you are still in the mailcow root folder:" class="md-nav__link">
-    4. Create hard links to the full path of the new certificates. Assuming you are still in the mailcow root folder:
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#546-restart-affected-containers" title="5. Restart affected containers:" class="md-nav__link">
-    5. Restart affected containers:
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
@@ -1148,17 +1034,17 @@
 </ul>
 <h2 id="lets-encrypt">Let's Encrypt<a class="headerlink" href="#lets-encrypt" title="Permanent link">&para;</a></h2>
 <p>This is just an example of how to obtain certificates with certbot. There are several methods!</p>
-<h3 id="146-get-the-certbot-client">1. Get the certbot client:<a class="headerlink" href="#146-get-the-certbot-client" title="Permanent link">&para;</a></h3>
+<p>1. Get the certbot client:</p>
 <div class="codehilite"><pre><span></span>wget https://dl.eff.org/certbot-auto -O /usr/local/sbin/certbot <span class="o">&amp;&amp;</span> chmod +x /usr/local/sbin/certbot
 </pre></div>
 
 
-<h3 id="246-make-sure-you-set-http_bind0000-and-http_port80-in-mailcowconf-or-setup-a-reverse-proxy-to-enable-connections-to-port-80-if-you-changed-http_bind-then-rebuild-nginx">2. Make sure you set <code>HTTP_BIND=0.0.0.0</code> and <code>HTTP_PORT=80</code> in <code>mailcow.conf</code> or setup a reverse proxy to enable connections to port 80. If you changed HTTP_BIND, then rebuild Nginx:<a class="headerlink" href="#246-make-sure-you-set-http_bind0000-and-http_port80-in-mailcowconf-or-setup-a-reverse-proxy-to-enable-connections-to-port-80-if-you-changed-http_bind-then-rebuild-nginx" title="Permanent link">&para;</a></h3>
+<p>2. Make sure you set <code>HTTP_BIND=0.0.0.0</code> and <code>HTTP_PORT=80</code> in <code>mailcow.conf</code> or setup a reverse proxy to enable connections to port 80. If you changed HTTP_BIND, then rebuild Nginx:</p>
 <div class="codehilite"><pre><span></span>docker-compose up -d
 </pre></div>
 
 
-<h3 id="346-request-the-certificate-with-the-webroot-method">3. Request the certificate with the webroot method:<a class="headerlink" href="#346-request-the-certificate-with-the-webroot-method" title="Permanent link">&para;</a></h3>
+<p>3. Request the certificate with the webroot method:</p>
 <div class="codehilite"><pre><span></span><span class="nb">cd</span> /path/to/git/clone/mailcow-dockerized
 <span class="nb">source</span> mailcow.conf
 certbot certonly <span class="se">\</span>
@@ -1176,7 +1062,7 @@ certbot certonly <span class="se">\</span>
 <p class="admonition-title">Warning</p>
 <p>Remember to replace the example.org domain with your own domain, this command will not work if you don't.</p>
 </div>
-<h3 id="446-create-hard-links-to-the-full-path-of-the-new-certificates-assuming-you-are-still-in-the-mailcow-root-folder">4. Create hard links to the full path of the new certificates. Assuming you are still in the mailcow root folder:<a class="headerlink" href="#446-create-hard-links-to-the-full-path-of-the-new-certificates-assuming-you-are-still-in-the-mailcow-root-folder" title="Permanent link">&para;</a></h3>
+<p>4. Create hard links to the full path of the new certificates. Assuming you are still in the mailcow root folder:</p>
 <div class="codehilite"><pre><span></span>mv data/assets/ssl/cert.<span class="o">{</span>pem,pem.backup<span class="o">}</span>
 mv data/assets/ssl/key.<span class="o">{</span>pem,pem.backup<span class="o">}</span>
 ln <span class="k">$(</span>readlink -f /etc/letsencrypt/live/<span class="si">${</span><span class="nv">MAILCOW_HOSTNAME</span><span class="si">}</span>/fullchain.pem<span class="k">)</span> data/assets/ssl/cert.pem
@@ -1184,7 +1070,7 @@ ln <span class="k">$(</span>readlink -f /etc/letsencrypt/live/<span class="si">$
 </pre></div>
 
 
-<h3 id="546-restart-affected-containers">5. Restart affected containers:<a class="headerlink" href="#546-restart-affected-containers" title="Permanent link">&para;</a></h3>
+<p>5. Restart affected containers:</p>
 <div class="codehilite"><pre><span></span>docker-compose restart postfix-mailcow dovecot-mailcow nginx-mailcow
 </pre></div>
 
