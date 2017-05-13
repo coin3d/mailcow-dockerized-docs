@@ -512,7 +512,7 @@
         }, 
         {
             "location": "/u_e-backup_restore-maildir/", 
-            "text": "Backup\n\n\nThis line backups the vmail directory to a file backup_vmail.tar.gz in the mailcow root directory:\n\n\ncd /path/to/mailcow-dockerized\nsource mailcow.conf\nDATE=$(date +\n%Y%m%d_%H%M%S\n)\ndocker run --rm -it -v $(docker inspect --format \n{{ range .Mounts }}\\{{ if eq .Destination \n/var/vmail\n }}{{ .Name }}{{ end }}{{ end }}\n $(docker-compose ps -q dovecot-mailcow)):/vmail -v \n${\nPWD\n}\n:/backup debian:jessie tar cvfz /backup/backup_vmail.tar.gz /vmail\n\n\n\n\n\nYou can change the path by adjusting ${PWD} (which equals to the current directory) to any path you have write-access to.\nSet the filename \nbackup_vmail.tar.gz\n to any custom name, but leave the path as it is. Example: \n[...] tar cvfz /backup/my_own_filename_.tar.gz\n\n\nRestore\n\n\ncd /path/to/mailcow-dockerized\nsource mailcow.conf\nDATE=$(date +\n%Y%m%d_%H%M%S\n)\n{% raw %}docker run --rm -it -v $(docker inspect --format \n{{ range .Mounts }}{{ if eq .Destination \n/var/vmail\n }}{{ .Name }}{{ end }}{{ end }}\n $(docker-compose ps -q dovecot-mailcow)):/vmail -v \n${\nPWD\n}\n:/backup debian:jessie tar xvfz /backup/backup_vmail.tar.gz{% endraw %}", 
+            "text": "Backup\n\n\nThis line backups the vmail directory to a file backup_vmail.tar.gz in the mailcow root directory:\n\n\ncd /path/to/mailcow-dockerized\nsource mailcow.conf\nDATE=$(date +\n%Y%m%d_%H%M%S\n)\ndocker run --rm -it -v $(docker inspect --format \n{{ range .Mounts }}\\{{ if eq .Destination \n/var/vmail\n }}{{ .Name }}{{ end }}{{ end }}\n $(docker-compose ps -q dovecot-mailcow)):/vmail -v \n${\nPWD\n}\n:/backup debian:jessie tar cvfz /backup/backup_vmail.tar.gz /vmail\n\n\n\n\n\nYou can change the path by adjusting ${PWD} (which equals to the current directory) to any path you have write-access to.\nSet the filename \nbackup_vmail.tar.gz\n to any custom name, but leave the path as it is. Example: \n[...] tar cvfz /backup/my_own_filename_.tar.gz\n\n\nRestore\n\n\ncd /path/to/mailcow-dockerized\nsource mailcow.conf\nDATE=$(date +\n%Y%m%d_%H%M%S\n)\ndocker run --rm -it -v $(docker inspect --format \n{{ range .Mounts }}{{ if eq .Destination \n/var/vmail\n }}{{ .Name }}{{ end }}{{ end }}\n $(docker-compose ps -q dovecot-mailcow)):/vmail -v \n${\nPWD\n}\n:/backup debian:jessie tar xvfz /backup/backup_vmail.tar.gz", 
             "title": "Backup Maildir"
         }, 
         {
@@ -522,7 +522,7 @@
         }, 
         {
             "location": "/u_e-backup_restore-maildir/#restore", 
-            "text": "cd /path/to/mailcow-dockerized\nsource mailcow.conf\nDATE=$(date + %Y%m%d_%H%M%S )\n{% raw %}docker run --rm -it -v $(docker inspect --format  {{ range .Mounts }}{{ if eq .Destination  /var/vmail  }}{{ .Name }}{{ end }}{{ end }}  $(docker-compose ps -q dovecot-mailcow)):/vmail -v  ${ PWD } :/backup debian:jessie tar xvfz /backup/backup_vmail.tar.gz{% endraw %}", 
+            "text": "cd /path/to/mailcow-dockerized\nsource mailcow.conf\nDATE=$(date + %Y%m%d_%H%M%S )\ndocker run --rm -it -v $(docker inspect --format  {{ range .Mounts }}{{ if eq .Destination  /var/vmail  }}{{ .Name }}{{ end }}{{ end }}  $(docker-compose ps -q dovecot-mailcow)):/vmail -v  ${ PWD } :/backup debian:jessie tar xvfz /backup/backup_vmail.tar.gz", 
             "title": "Restore"
         }, 
         {

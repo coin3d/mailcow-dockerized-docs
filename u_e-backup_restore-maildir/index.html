@@ -1079,7 +1079,7 @@ Set the filename <code>backup_vmail.tar.gz</code> to any custom name, but leave 
 <div class="codehilite"><pre><span></span>cd /path/to/mailcow-dockerized
 source mailcow.conf
 DATE=$(date +&quot;%Y%m%d_%H%M%S&quot;)
-{% raw %}docker run --rm -it -v $(docker inspect --format &#39;{{ range .Mounts }}{{ if eq .Destination &quot;/var/vmail&quot; }}{{ .Name }}{{ end }}{{ end }}&#39; $(docker-compose ps -q dovecot-mailcow)):/vmail -v <span class="cp">${</span><span class="n">PWD</span><span class="cp">}</span>:/backup debian:jessie tar xvfz /backup/backup_vmail.tar.gz{% endraw %}
+docker run --rm -it -v $(docker inspect --format &#39;{{ range .Mounts }}{{ if eq .Destination &quot;/var/vmail&quot; }}{{ .Name }}{{ end }}{{ end }}&#39; $(docker-compose ps -q dovecot-mailcow)):/vmail -v <span class="cp">${</span><span class="n">PWD</span><span class="cp">}</span>:/backup debian:jessie tar xvfz /backup/backup_vmail.tar.gz
 </pre></div>
                 
                   
