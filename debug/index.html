@@ -1,6 +1,6 @@
 
 <!DOCTYPE html>
-<html class="no-js">
+<html lang="en" class="no-js">
   <head>
     
       <meta charset="utf-8">
@@ -11,7 +11,7 @@
       
         <link rel="shortcut icon" href="../assets/images/favicon.png">
       
-      <meta name="generator" content="mkdocs-0.16.3, mkdocs-material-1.3.0">
+      <meta name="generator" content="mkdocs-0.16.3, mkdocs-material-1.6.1">
     
     
       
@@ -22,9 +22,9 @@
       <script src="../assets/javascripts/modernizr-56ade86843.js"></script>
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/application-1d1da4857d.css">
+      <link rel="stylesheet" href="../assets/stylesheets/application-4d0d3f2fbf.css">
       
-        <link rel="stylesheet" href="../assets/stylesheets/application-66fa0d9bba.palette.css">
+        <link rel="stylesheet" href="../assets/stylesheets/application-f78e5cb881.palette.css">
       
     
     
@@ -92,15 +92,21 @@
           <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
           
 <div class="md-search" data-md-component="search">
-  <div class="md-search__overlay"></div>
+  <label class="md-search__overlay" for="search"></label>
   <div class="md-search__inner">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" placeholder="Search" accesskey="s" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query">
+      <input type="text" class="md-search__input" name="query" required placeholder="Search" accesskey="s" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query">
       <label class="md-icon md-search__icon" for="search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset">close</button>
     </form>
     <div class="md-search__output">
       <div class="md-search__scrollwrap" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="result"></div>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta" data-md-lang-result-none="No matching documents" data-md-lang-result-one="1 matching document" data-md-lang-result-other="# matching documents">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
       </div>
     </div>
   </div>
@@ -439,6 +445,8 @@
   <li class="md-nav__item md-nav__item--active">
     
     <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+      
     
     
     <a href="./" title="Introduction" class="md-nav__link md-nav__link--active">
@@ -983,6 +991,8 @@
 <nav class="md-nav md-nav--secondary">
   
   
+    
+  
   
 </nav>
                   </div>
@@ -997,17 +1007,36 @@
                   <a href="https://github.com/mailcow/mailcow-dockerized/edit/master/docs/debug.md" title="Edit this page" class="md-icon md-content__icon">edit</a>
                 
                 
-                  <h1>Introduction</h1>
-                
                 <p>When a problem occurs, then always for a reason! What you want to do in such a case is:</p>
 <ol>
-<li>Read your logs; follow them to see what the reason for your problem is.</li>
+<li>Read your logs; follow them to see what the reason for your problem is.
+&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</li>
+<li>Follow the leads given to you in your logfiles and start investigating.</li>
+<li>Restarting the troubled service or the whole stack to see if the problem persists.</li>
+<li>Read the documentation of the troubled service and search it's bugtracker for your problem.</li>
+<li>
+<h1 id="search-our-issues-for-your-problem">Search our <a href="https://github.com/mailcow/mailcow-dockerized/issues">issues</a> for your problem.<a class="headerlink" href="#search-our-issues-for-your-problem" title="Permanent link">&para;</a></h1>
+</li>
 <li>Follow the leads given to you in your log files and start investigating.</li>
 <li>Restart the troubled service or the whole stack to see if the problem persists.</li>
 <li>Read the documentation of the troubled service and search it's bug tracker for your problem.</li>
-<li>Search our <a href="https://github.com/mailcow/mailcow-dockerized/issues">issues</a> and <a href="https://forum.mailcow.email/">forum</a> for topics related to your problem.</li>
+<li>Search our <a href="https://github.com/mailcow/mailcow-dockerized/issues">issues</a> and <a href="https://forum.mailcow.email/">forum</a> for topics related to your problem.<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>2ef7ae0f89cf3f9e8c7a73c99449cc50215450d7</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
 <li><a href="https://github.com/mailcow/mailcow-dockerized/issues">Create an issue</a> over at our GitHub repository if you think your problem might be a bug or a missing feature you badly need. But please make sure, that you include <strong>all the logs</strong> and a full description to your problem.</li>
-<li>If you need help with a problem on a configuration or a setup, or got a question please head over to our <a href="https://forum.mailcow.email/">forum</a> and open a thread.</li>
 <li>Connect to IRC (<a href="https://webchat.freenode.net/">chat.freenode.net</a>) and join our IRC channel <a href="irc://chat.freenode.net:6667/mailcow">#mailcow</a>.</li>
 </ol>
                 
@@ -1079,7 +1108,7 @@
       
     </div>
     
-      <script src="../assets/javascripts/application-7aa26ad9ec.js"></script>
+      <script src="../assets/javascripts/application-6b599127bc.js"></script>
       <script>app.initialize({url:{base:".."}})</script>
       
     
