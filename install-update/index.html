@@ -1149,6 +1149,11 @@ docker rm $(docker ps -a -q)
 
 
 <h3 id="step-2">Step 2<a class="headerlink" href="#step-2" title="Permanent link">&para;</a></h3>
+<p>When upgrading from a version older than May 13th, 2017 to a version released after that date, you need to run the following command first as network settings have been changed:</p>
+<div class="codehilite"><pre><span></span>docker-compose down
+</pre></div>
+
+
 <p>Pull new images (if any) and recreate changed containers:</p>
 <div class="codehilite"><pre><span></span>docker-compose pull
 docker-compose up -d --remove-orphans

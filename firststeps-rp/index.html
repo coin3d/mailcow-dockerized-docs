@@ -1077,7 +1077,7 @@ mailcow: dockerized trusts the default gateway IP 172.22.1.1 as proxy. This is v
 <p>1. Make sure you change HTTP_BIND and HTTPS_BIND in <code>mailcow.conf</code> to a local address and set the ports accordingly, for example:</p>
 <div class="codehilite"><pre><span></span><span class="nv">HTTP_BIND</span><span class="o">=</span><span class="m">127</span>.0.0.1
 <span class="nv">HTTP_PORT</span><span class="o">=</span><span class="m">8080</span>
-<span class="nv">HTTPS_PORT</span><span class="o">=</span><span class="m">127</span>.0.0.1
+<span class="nv">HTTPS_BIND</span><span class="o">=</span><span class="m">127</span>.0.0.1
 <span class="nv">HTTPS_PORT</span><span class="o">=</span><span class="m">8443</span>
 </pre></div>
 

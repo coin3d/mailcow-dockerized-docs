@@ -1069,7 +1069,7 @@
 <div class="codehilite"><pre><span></span>cd /path/to/mailcow-dockerized
 source mailcow.conf
 DATE=$(date +&quot;%Y%m%d_%H%M%S&quot;)
-docker run --rm -it -v $(docker inspect --format &#39;{{ range .Mounts }}\{{ if eq .Destination &quot;/var/vmail&quot; }}{{ .Name }}{{ end }}{{ end }}&#39; $(docker-compose ps -q dovecot-mailcow)):/vmail -v <span class="cp">${</span><span class="n">PWD</span><span class="cp">}</span>:/backup debian:jessie tar cvfz /backup/backup_vmail.tar.gz /vmail
+docker run --rm -it -v $(docker inspect --format &#39;{{ range .Mounts }}{{ if eq .Destination &quot;/var/vmail&quot; }}{{ .Name }}{{ end }}{{ end }}&#39; $(docker-compose ps -q dovecot-mailcow)):/vmail -v <span class="cp">${</span><span class="n">PWD</span><span class="cp">}</span>:/backup debian:jessie tar cvfz /backup/backup_vmail.tar.gz /vmail
 </pre></div>
 
 
