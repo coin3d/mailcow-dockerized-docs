@@ -1025,7 +1025,7 @@ chmod +x /usr/local/bin/docker-compose
 
 <p>Please use the latest Docker engine available and do not use the engine that ships with your distros repository.</p>
 <p>2. Clone the master branch of the repository</p>
-<div class="codehilite"><pre><span></span>git clone https://github.com/andryyy/mailcow-dockerized &amp;&amp; cd mailcow-dockerized
+<div class="codehilite"><pre><span></span>git clone https://github.com/mailcow/mailcow-dockerized &amp;&amp; cd mailcow-dockerized
 </pre></div>
 
 
@@ -1040,7 +1040,7 @@ chmod +x /usr/local/bin/docker-compose
 
 
 <p>If you plan to use a reverse proxy, you can, for example, bind HTTPS to 127.0.0.1 on port 8443 and HTTP to 127.0.0.1 on port 8080.</p>
-<p>You may need to stop an existing pre-installed MTA which blocks port 25/tcp. See <a href="https://andryyy.github.io/mailcow-dockerized/first_steps/#install-a-local-mta">this chapter</a> to learn how to reconfigure Postfix to run besides mailcow after a successful installation.</p>
+<p>You may need to stop an existing pre-installed MTA which blocks port 25/tcp. See <a href="https://mailcow.github.io/mailcow-dockerized-docs/firststeps-local_mta/">this chapter</a> to learn how to reconfigure Postfix to run besides mailcow after a successful installation.</p>
 <p>5. Pull the images and run the composer file. The parameter <code>-d</code> will start mailcow: dockerized detached:</p>
 <div class="codehilite"><pre><span></span>docker-compose pull
 docker-compose up -d
